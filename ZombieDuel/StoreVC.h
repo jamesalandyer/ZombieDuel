@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  StoreVC.h
 //  ZombieDuel
 //
 //  Created by James Dyer on 6/22/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface StoreVC : UIViewController
 
 @end
-

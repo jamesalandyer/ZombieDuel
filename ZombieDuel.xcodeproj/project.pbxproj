@@ -9,10 +9,28 @@
 /* Begin PBXBuildFile section */
 		2BA1DA971D1B867A00FF28D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DA961D1B867A00FF28D4 /* main.m */; };
 		2BA1DA9A1D1B867A00FF28D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DA991D1B867A00FF28D4 /* AppDelegate.m */; };
-		2BA1DA9D1D1B867A00FF28D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DA9C1D1B867A00FF28D4 /* ViewController.m */; };
+		2BA1DA9D1D1B867A00FF28D4 /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DA9C1D1B867A00FF28D4 /* StartVC.m */; };
 		2BA1DAA01D1B867A00FF28D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DA9E1D1B867A00FF28D4 /* Main.storyboard */; };
 		2BA1DAA21D1B867B00FF28D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAA11D1B867B00FF28D4 /* Assets.xcassets */; };
 		2BA1DAA51D1B867B00FF28D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAA31D1B867B00FF28D4 /* LaunchScreen.storyboard */; };
+		2BA1DAB51D1B8AFD00FF28D4 /* OptionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAB41D1B8AFD00FF28D4 /* OptionsVC.m */; };
+		2BA1DAB91D1B8B5300FF28D4 /* DuelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAB81D1B8B5300FF28D4 /* DuelVC.m */; };
+		2BA1DABD1D1B8B7D00FF28D4 /* StoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DABC1D1B8B7D00FF28D4 /* StoreVC.m */; };
+		2BA1DAC01D1B8ECD00FF28D4 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DABF1D1B8ECD00FF28D4 /* Player.m */; };
+		2BA1DAD21D1B90D100FF28D4 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAD11D1B90D100FF28D4 /* Character.m */; };
+		2BA1DAD51D1B914D00FF28D4 /* Hunter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAD41D1B914D00FF28D4 /* Hunter.m */; };
+		2BA1DAD81D1B916B00FF28D4 /* Hank.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAD71D1B916B00FF28D4 /* Hank.m */; };
+		2BA1DADB1D1B918600FF28D4 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DADA1D1B918600FF28D4 /* Enemy.m */; };
+		2BA1DADF1D1B919B00FF28D4 /* Jack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DADE1D1B919B00FF28D4 /* Jack.m */; };
+		2BA1DAE21D1B91A700FF28D4 /* Melissa.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAE11D1B91A700FF28D4 /* Melissa.m */; };
+		2BA1DAE51D1B91B100FF28D4 /* Timmy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAE41D1B91B100FF28D4 /* Timmy.m */; };
+		2BA1DAE81D1B91C000FF28D4 /* Johnny.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAE71D1B91C000FF28D4 /* Johnny.m */; };
+		2BA1DAEB1D1B91CA00FF28D4 /* Kip.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAEA1D1B91CA00FF28D4 /* Kip.m */; };
+		2BA1DAEE1D1B91D500FF28D4 /* Cody.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAED1D1B91D500FF28D4 /* Cody.m */; };
+		2BA1DAF11D1B91E200FF28D4 /* Bob.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAF01D1B91E200FF28D4 /* Bob.m */; };
+		2BA1DAF41D1B91EF00FF28D4 /* Carl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAF31D1B91EF00FF28D4 /* Carl.m */; };
+		2BA1DAF71D1B920200FF28D4 /* Attack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAF61D1B920200FF28D4 /* Attack.m */; };
+		2BA1DAFA1D1B921600FF28D4 /* Defense.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAF91D1B921600FF28D4 /* Defense.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +38,48 @@
 		2BA1DA961D1B867A00FF28D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BA1DA981D1B867A00FF28D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BA1DA991D1B867A00FF28D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2BA1DA9B1D1B867A00FF28D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2BA1DA9C1D1B867A00FF28D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BA1DA9B1D1B867A00FF28D4 /* StartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
+		2BA1DA9C1D1B867A00FF28D4 /* StartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
 		2BA1DA9F1D1B867A00FF28D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BA1DAA11D1B867B00FF28D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BA1DAA41D1B867B00FF28D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BA1DAA61D1B867B00FF28D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA1DAB31D1B8AFD00FF28D4 /* OptionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsVC.h; sourceTree = "<group>"; };
+		2BA1DAB41D1B8AFD00FF28D4 /* OptionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsVC.m; sourceTree = "<group>"; };
+		2BA1DAB71D1B8B5300FF28D4 /* DuelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuelVC.h; sourceTree = "<group>"; };
+		2BA1DAB81D1B8B5300FF28D4 /* DuelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuelVC.m; sourceTree = "<group>"; };
+		2BA1DABB1D1B8B7D00FF28D4 /* StoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreVC.h; sourceTree = "<group>"; };
+		2BA1DABC1D1B8B7D00FF28D4 /* StoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreVC.m; sourceTree = "<group>"; };
+		2BA1DABE1D1B8ECD00FF28D4 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		2BA1DABF1D1B8ECD00FF28D4 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		2BA1DAD01D1B90D100FF28D4 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		2BA1DAD11D1B90D100FF28D4 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		2BA1DAD31D1B914D00FF28D4 /* Hunter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
+		2BA1DAD41D1B914D00FF28D4 /* Hunter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hunter.m; sourceTree = "<group>"; };
+		2BA1DAD61D1B916B00FF28D4 /* Hank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hank.h; sourceTree = "<group>"; };
+		2BA1DAD71D1B916B00FF28D4 /* Hank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hank.m; sourceTree = "<group>"; };
+		2BA1DAD91D1B918600FF28D4 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		2BA1DADA1D1B918600FF28D4 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		2BA1DADD1D1B919B00FF28D4 /* Jack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jack.h; sourceTree = "<group>"; };
+		2BA1DADE1D1B919B00FF28D4 /* Jack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jack.m; sourceTree = "<group>"; };
+		2BA1DAE01D1B91A700FF28D4 /* Melissa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Melissa.h; sourceTree = "<group>"; };
+		2BA1DAE11D1B91A700FF28D4 /* Melissa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Melissa.m; sourceTree = "<group>"; };
+		2BA1DAE31D1B91B100FF28D4 /* Timmy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timmy.h; sourceTree = "<group>"; };
+		2BA1DAE41D1B91B100FF28D4 /* Timmy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timmy.m; sourceTree = "<group>"; };
+		2BA1DAE61D1B91C000FF28D4 /* Johnny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Johnny.h; sourceTree = "<group>"; };
+		2BA1DAE71D1B91C000FF28D4 /* Johnny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Johnny.m; sourceTree = "<group>"; };
+		2BA1DAE91D1B91CA00FF28D4 /* Kip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kip.h; sourceTree = "<group>"; };
+		2BA1DAEA1D1B91CA00FF28D4 /* Kip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kip.m; sourceTree = "<group>"; };
+		2BA1DAEC1D1B91D500FF28D4 /* Cody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cody.h; sourceTree = "<group>"; };
+		2BA1DAED1D1B91D500FF28D4 /* Cody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cody.m; sourceTree = "<group>"; };
+		2BA1DAEF1D1B91E200FF28D4 /* Bob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bob.h; sourceTree = "<group>"; };
+		2BA1DAF01D1B91E200FF28D4 /* Bob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bob.m; sourceTree = "<group>"; };
+		2BA1DAF21D1B91EF00FF28D4 /* Carl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carl.h; sourceTree = "<group>"; };
+		2BA1DAF31D1B91EF00FF28D4 /* Carl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carl.m; sourceTree = "<group>"; };
+		2BA1DAF51D1B920200FF28D4 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attack.h; sourceTree = "<group>"; };
+		2BA1DAF61D1B920200FF28D4 /* Attack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attack.m; sourceTree = "<group>"; };
+		2BA1DAF81D1B921600FF28D4 /* Defense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defense.h; sourceTree = "<group>"; };
+		2BA1DAF91D1B921600FF28D4 /* Defense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defense.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +112,10 @@
 		2BA1DA941D1B867A00FF28D4 /* ZombieDuel */ = {
 			isa = PBXGroup;
 			children = (
-				2BA1DA981D1B867A00FF28D4 /* AppDelegate.h */,
-				2BA1DA991D1B867A00FF28D4 /* AppDelegate.m */,
-				2BA1DA9B1D1B867A00FF28D4 /* ViewController.h */,
-				2BA1DA9C1D1B867A00FF28D4 /* ViewController.m */,
-				2BA1DA9E1D1B867A00FF28D4 /* Main.storyboard */,
-				2BA1DAA11D1B867B00FF28D4 /* Assets.xcassets */,
-				2BA1DAA31D1B867B00FF28D4 /* LaunchScreen.storyboard */,
-				2BA1DAA61D1B867B00FF28D4 /* Info.plist */,
+				2BA1DAAE1D1B87AE00FF28D4 /* Model */,
+				2BA1DAAF1D1B87B400FF28D4 /* View */,
+				2BA1DAB01D1B87BA00FF28D4 /* Controller */,
+				2BA1DAAC1D1B876C00FF28D4 /* Assets */,
 				2BA1DA951D1B867A00FF28D4 /* Supporting Files */,
 			);
 			path = ZombieDuel;
@@ -74,9 +124,241 @@
 		2BA1DA951D1B867A00FF28D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2BA1DAAD1D1B878A00FF28D4 /* AppDelegate */,
+				2BA1DAA61D1B867B00FF28D4 /* Info.plist */,
 				2BA1DA961D1B867A00FF28D4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BA1DAAC1D1B876C00FF28D4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DA9E1D1B867A00FF28D4 /* Main.storyboard */,
+				2BA1DAA31D1B867B00FF28D4 /* LaunchScreen.storyboard */,
+				2BA1DAA11D1B867B00FF28D4 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		2BA1DAAD1D1B878A00FF28D4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DA981D1B867A00FF28D4 /* AppDelegate.h */,
+				2BA1DA991D1B867A00FF28D4 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2BA1DAAE1D1B87AE00FF28D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAC51D1B8F3200FF28D4 /* Character */,
+				2BA1DAC11D1B8EE300FF28D4 /* Player */,
+				2BA1DAC61D1B8F9A00FF28D4 /* Hunter */,
+				2BA1DAC71D1B8FA300FF28D4 /* Hank */,
+				2BA1DAC21D1B8EF200FF28D4 /* Enemy */,
+				2BA1DAC81D1B8FA900FF28D4 /* Jack */,
+				2BA1DAC91D1B900200FF28D4 /* Melissa */,
+				2BA1DACA1D1B901500FF28D4 /* Timmy */,
+				2BA1DACB1D1B904000FF28D4 /* Johnny */,
+				2BA1DACC1D1B905A00FF28D4 /* Kip */,
+				2BA1DACD1D1B908D00FF28D4 /* Cody */,
+				2BA1DACE1D1B909800FF28D4 /* Bob */,
+				2BA1DACF1D1B90B200FF28D4 /* Carl */,
+				2BA1DAC31D1B8F1E00FF28D4 /* Attack */,
+				2BA1DAC41D1B8F2500FF28D4 /* Defense */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BA1DAAF1D1B87B400FF28D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2BA1DAB01D1B87BA00FF28D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAB11D1B8AD100FF28D4 /* StartVC */,
+				2BA1DAB21D1B8ADF00FF28D4 /* OptionsVC */,
+				2BA1DAB61D1B8B3200FF28D4 /* DuelVC */,
+				2BA1DABA1D1B8B6400FF28D4 /* StoreVC */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2BA1DAB11D1B8AD100FF28D4 /* StartVC */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DA9B1D1B867A00FF28D4 /* StartVC.h */,
+				2BA1DA9C1D1B867A00FF28D4 /* StartVC.m */,
+			);
+			name = StartVC;
+			sourceTree = "<group>";
+		};
+		2BA1DAB21D1B8ADF00FF28D4 /* OptionsVC */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAB31D1B8AFD00FF28D4 /* OptionsVC.h */,
+				2BA1DAB41D1B8AFD00FF28D4 /* OptionsVC.m */,
+			);
+			name = OptionsVC;
+			sourceTree = "<group>";
+		};
+		2BA1DAB61D1B8B3200FF28D4 /* DuelVC */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAB71D1B8B5300FF28D4 /* DuelVC.h */,
+				2BA1DAB81D1B8B5300FF28D4 /* DuelVC.m */,
+			);
+			name = DuelVC;
+			sourceTree = "<group>";
+		};
+		2BA1DABA1D1B8B6400FF28D4 /* StoreVC */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DABB1D1B8B7D00FF28D4 /* StoreVC.h */,
+				2BA1DABC1D1B8B7D00FF28D4 /* StoreVC.m */,
+			);
+			name = StoreVC;
+			sourceTree = "<group>";
+		};
+		2BA1DAC11D1B8EE300FF28D4 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DABE1D1B8ECD00FF28D4 /* Player.h */,
+				2BA1DABF1D1B8ECD00FF28D4 /* Player.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		2BA1DAC21D1B8EF200FF28D4 /* Enemy */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAD91D1B918600FF28D4 /* Enemy.h */,
+				2BA1DADA1D1B918600FF28D4 /* Enemy.m */,
+			);
+			name = Enemy;
+			sourceTree = "<group>";
+		};
+		2BA1DAC31D1B8F1E00FF28D4 /* Attack */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAF51D1B920200FF28D4 /* Attack.h */,
+				2BA1DAF61D1B920200FF28D4 /* Attack.m */,
+			);
+			name = Attack;
+			sourceTree = "<group>";
+		};
+		2BA1DAC41D1B8F2500FF28D4 /* Defense */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAF81D1B921600FF28D4 /* Defense.h */,
+				2BA1DAF91D1B921600FF28D4 /* Defense.m */,
+			);
+			name = Defense;
+			sourceTree = "<group>";
+		};
+		2BA1DAC51D1B8F3200FF28D4 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAD01D1B90D100FF28D4 /* Character.h */,
+				2BA1DAD11D1B90D100FF28D4 /* Character.m */,
+			);
+			name = Character;
+			sourceTree = "<group>";
+		};
+		2BA1DAC61D1B8F9A00FF28D4 /* Hunter */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAD31D1B914D00FF28D4 /* Hunter.h */,
+				2BA1DAD41D1B914D00FF28D4 /* Hunter.m */,
+			);
+			name = Hunter;
+			sourceTree = "<group>";
+		};
+		2BA1DAC71D1B8FA300FF28D4 /* Hank */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAD61D1B916B00FF28D4 /* Hank.h */,
+				2BA1DAD71D1B916B00FF28D4 /* Hank.m */,
+			);
+			name = Hank;
+			sourceTree = "<group>";
+		};
+		2BA1DAC81D1B8FA900FF28D4 /* Jack */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DADD1D1B919B00FF28D4 /* Jack.h */,
+				2BA1DADE1D1B919B00FF28D4 /* Jack.m */,
+			);
+			name = Jack;
+			sourceTree = "<group>";
+		};
+		2BA1DAC91D1B900200FF28D4 /* Melissa */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAE01D1B91A700FF28D4 /* Melissa.h */,
+				2BA1DAE11D1B91A700FF28D4 /* Melissa.m */,
+			);
+			name = Melissa;
+			sourceTree = "<group>";
+		};
+		2BA1DACA1D1B901500FF28D4 /* Timmy */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAE31D1B91B100FF28D4 /* Timmy.h */,
+				2BA1DAE41D1B91B100FF28D4 /* Timmy.m */,
+			);
+			name = Timmy;
+			sourceTree = "<group>";
+		};
+		2BA1DACB1D1B904000FF28D4 /* Johnny */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAE61D1B91C000FF28D4 /* Johnny.h */,
+				2BA1DAE71D1B91C000FF28D4 /* Johnny.m */,
+			);
+			name = Johnny;
+			sourceTree = "<group>";
+		};
+		2BA1DACC1D1B905A00FF28D4 /* Kip */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAE91D1B91CA00FF28D4 /* Kip.h */,
+				2BA1DAEA1D1B91CA00FF28D4 /* Kip.m */,
+			);
+			name = Kip;
+			sourceTree = "<group>";
+		};
+		2BA1DACD1D1B908D00FF28D4 /* Cody */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAEC1D1B91D500FF28D4 /* Cody.h */,
+				2BA1DAED1D1B91D500FF28D4 /* Cody.m */,
+			);
+			name = Cody;
+			sourceTree = "<group>";
+		};
+		2BA1DACE1D1B909800FF28D4 /* Bob */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAEF1D1B91E200FF28D4 /* Bob.h */,
+				2BA1DAF01D1B91E200FF28D4 /* Bob.m */,
+			);
+			name = Bob;
+			sourceTree = "<group>";
+		};
+		2BA1DACF1D1B90B200FF28D4 /* Carl */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAF21D1B91EF00FF28D4 /* Carl.h */,
+				2BA1DAF31D1B91EF00FF28D4 /* Carl.m */,
+			);
+			name = Carl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +431,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BA1DA9D1D1B867A00FF28D4 /* ViewController.m in Sources */,
+				2BA1DAE21D1B91A700FF28D4 /* Melissa.m in Sources */,
+				2BA1DA9D1D1B867A00FF28D4 /* StartVC.m in Sources */,
+				2BA1DAFA1D1B921600FF28D4 /* Defense.m in Sources */,
 				2BA1DA9A1D1B867A00FF28D4 /* AppDelegate.m in Sources */,
+				2BA1DAF11D1B91E200FF28D4 /* Bob.m in Sources */,
+				2BA1DADF1D1B919B00FF28D4 /* Jack.m in Sources */,
+				2BA1DAEB1D1B91CA00FF28D4 /* Kip.m in Sources */,
+				2BA1DABD1D1B8B7D00FF28D4 /* StoreVC.m in Sources */,
+				2BA1DAD21D1B90D100FF28D4 /* Character.m in Sources */,
 				2BA1DA971D1B867A00FF28D4 /* main.m in Sources */,
+				2BA1DAD81D1B916B00FF28D4 /* Hank.m in Sources */,
+				2BA1DAB91D1B8B5300FF28D4 /* DuelVC.m in Sources */,
+				2BA1DAF71D1B920200FF28D4 /* Attack.m in Sources */,
+				2BA1DAE81D1B91C000FF28D4 /* Johnny.m in Sources */,
+				2BA1DAF41D1B91EF00FF28D4 /* Carl.m in Sources */,
+				2BA1DAEE1D1B91D500FF28D4 /* Cody.m in Sources */,
+				2BA1DAC01D1B8ECD00FF28D4 /* Player.m in Sources */,
+				2BA1DAE51D1B91B100FF28D4 /* Timmy.m in Sources */,
+				2BA1DAD51D1B914D00FF28D4 /* Hunter.m in Sources */,
+				2BA1DADB1D1B918600FF28D4 /* Enemy.m in Sources */,
+				2BA1DAB51D1B8AFD00FF28D4 /* OptionsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
