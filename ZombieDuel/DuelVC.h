@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DuelVC : UIViewController
-
+@property (nonatomic) BOOL nightThemeChosen;
 @end

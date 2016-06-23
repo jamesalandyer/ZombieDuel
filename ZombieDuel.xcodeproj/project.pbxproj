@@ -34,6 +34,8 @@
 		2BA1DAFD1D1B98B600FF28D4 /* CustomPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */; };
 		2BA1DB001D1B9D1B00FF28D4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAFE1D1B9D1B00FF28D4 /* Roboto-Bold.ttf */; };
 		2BA1DB011D1B9D1B00FF28D4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAFF1D1B9D1B00FF28D4 /* Roboto-Regular.ttf */; };
+		2BA1DB051D1BAE5000FF28D4 /* CustomRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB041D1BAE5000FF28D4 /* CustomRoundedButton.m */; };
+		2BA1DB081D1BAFBB00FF28D4 /* CustomAnimatedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB071D1BAFBB00FF28D4 /* CustomAnimatedButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,10 @@
 		2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPlayButton.m; sourceTree = "<group>"; };
 		2BA1DAFE1D1B9D1B00FF28D4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		2BA1DAFF1D1B9D1B00FF28D4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		2BA1DB031D1BAE5000FF28D4 /* CustomRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRoundedButton.h; sourceTree = "<group>"; };
+		2BA1DB041D1BAE5000FF28D4 /* CustomRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRoundedButton.m; sourceTree = "<group>"; };
+		2BA1DB061D1BAFBB00FF28D4 /* CustomAnimatedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimatedButton.h; sourceTree = "<group>"; };
+		2BA1DB071D1BAFBB00FF28D4 /* CustomAnimatedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimatedButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +189,7 @@
 		2BA1DAAF1D1B87B400FF28D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BA1DAFB1D1B98B600FF28D4 /* CustomPlayButton.h */,
-				2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */,
+				2BA1DB0C1D1BB64800FF28D4 /* Buttons */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -380,6 +385,19 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		2BA1DB0C1D1BB64800FF28D4 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAFB1D1B98B600FF28D4 /* CustomPlayButton.h */,
+				2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */,
+				2BA1DB031D1BAE5000FF28D4 /* CustomRoundedButton.h */,
+				2BA1DB041D1BAE5000FF28D4 /* CustomRoundedButton.m */,
+				2BA1DB061D1BAFBB00FF28D4 /* CustomAnimatedButton.h */,
+				2BA1DB071D1BAFBB00FF28D4 /* CustomAnimatedButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,10 +473,12 @@
 				2BA1DAE21D1B91A700FF28D4 /* Melissa.m in Sources */,
 				2BA1DA9D1D1B867A00FF28D4 /* StartVC.m in Sources */,
 				2BA1DAFA1D1B921600FF28D4 /* Defense.m in Sources */,
+				2BA1DB081D1BAFBB00FF28D4 /* CustomAnimatedButton.m in Sources */,
 				2BA1DA9A1D1B867A00FF28D4 /* AppDelegate.m in Sources */,
 				2BA1DAFD1D1B98B600FF28D4 /* CustomPlayButton.m in Sources */,
 				2BA1DAF11D1B91E200FF28D4 /* Bob.m in Sources */,
 				2BA1DADF1D1B919B00FF28D4 /* Jack.m in Sources */,
+				2BA1DB051D1BAE5000FF28D4 /* CustomRoundedButton.m in Sources */,
 				2BA1DAEB1D1B91CA00FF28D4 /* Kip.m in Sources */,
 				2BA1DABD1D1B8B7D00FF28D4 /* StoreVC.m in Sources */,
 				2BA1DAD21D1B90D100FF28D4 /* Character.m in Sources */,
