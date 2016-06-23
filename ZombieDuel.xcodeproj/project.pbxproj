@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BA1DA971D1B867A00FF28D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DA961D1B867A00FF28D4 /* main.m */; };
+		2BA1DA9A1D1B867A00FF28D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DA991D1B867A00FF28D4 /* AppDelegate.m */; };
+		2BA1DA9D1D1B867A00FF28D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DA9C1D1B867A00FF28D4 /* ViewController.m */; };
+		2BA1DAA01D1B867A00FF28D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DA9E1D1B867A00FF28D4 /* Main.storyboard */; };
+		2BA1DAA21D1B867B00FF28D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAA11D1B867B00FF28D4 /* Assets.xcassets */; };
+		2BA1DAA51D1B867B00FF28D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAA31D1B867B00FF28D4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BA1DA921D1B867A00FF28D4 /* ZombieDuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieDuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA1DA961D1B867A00FF28D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BA1DA981D1B867A00FF28D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BA1DA991D1B867A00FF28D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BA1DA9B1D1B867A00FF28D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BA1DA9C1D1B867A00FF28D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BA1DA9F1D1B867A00FF28D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BA1DAA11D1B867B00FF28D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BA1DAA41D1B867B00FF28D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BA1DAA61D1B867B00FF28D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BA1DA8F1D1B867A00FF28D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BA1DA891D1B867A00FF28D4 = {
+			isa = PBXGroup;
+			children = (
+				2BA1DA941D1B867A00FF28D4 /* ZombieDuel */,
+				2BA1DA931D1B867A00FF28D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BA1DA931D1B867A00FF28D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DA921D1B867A00FF28D4 /* ZombieDuel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BA1DA941D1B867A00FF28D4 /* ZombieDuel */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DA981D1B867A00FF28D4 /* AppDelegate.h */,
+				2BA1DA991D1B867A00FF28D4 /* AppDelegate.m */,
+				2BA1DA9B1D1B867A00FF28D4 /* ViewController.h */,
+				2BA1DA9C1D1B867A00FF28D4 /* ViewController.m */,
+				2BA1DA9E1D1B867A00FF28D4 /* Main.storyboard */,
+				2BA1DAA11D1B867B00FF28D4 /* Assets.xcassets */,
+				2BA1DAA31D1B867B00FF28D4 /* LaunchScreen.storyboard */,
+				2BA1DAA61D1B867B00FF28D4 /* Info.plist */,
+				2BA1DA951D1B867A00FF28D4 /* Supporting Files */,
+			);
+			path = ZombieDuel;
+			sourceTree = "<group>";
+		};
+		2BA1DA951D1B867A00FF28D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DA961D1B867A00FF28D4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BA1DA911D1B867A00FF28D4 /* ZombieDuel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA1DAA91D1B867B00FF28D4 /* Build configuration list for PBXNativeTarget "ZombieDuel" */;
+			buildPhases = (
+				2BA1DA8E1D1B867A00FF28D4 /* Sources */,
+				2BA1DA8F1D1B867A00FF28D4 /* Frameworks */,
+				2BA1DA901D1B867A00FF28D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZombieDuel;
+			productName = ZombieDuel;
+			productReference = 2BA1DA921D1B867A00FF28D4 /* ZombieDuel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BA1DA8A1D1B867A00FF28D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "James Dyer";
+				TargetAttributes = {
+					2BA1DA911D1B867A00FF28D4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2BA1DA8D1D1B867A00FF28D4 /* Build configuration list for PBXProject "ZombieDuel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BA1DA891D1B867A00FF28D4;
+			productRefGroup = 2BA1DA931D1B867A00FF28D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BA1DA911D1B867A00FF28D4 /* ZombieDuel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BA1DA901D1B867A00FF28D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA1DAA51D1B867B00FF28D4 /* LaunchScreen.storyboard in Resources */,
+				2BA1DAA21D1B867B00FF28D4 /* Assets.xcassets in Resources */,
+				2BA1DAA01D1B867A00FF28D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BA1DA8E1D1B867A00FF28D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA1DA9D1D1B867A00FF28D4 /* ViewController.m in Sources */,
+				2BA1DA9A1D1B867A00FF28D4 /* AppDelegate.m in Sources */,
+				2BA1DA971D1B867A00FF28D4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BA1DA9E1D1B867A00FF28D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA1DA9F1D1B867A00FF28D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BA1DAA31D1B867B00FF28D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA1DAA41D1B867B00FF28D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BA1DAA71D1B867B00FF28D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BA1DAA81D1B867B00FF28D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BA1DAAA1D1B867B00FF28D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZombieDuel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesalandyer.ZombieDuel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2BA1DAAB1D1B867B00FF28D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZombieDuel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesalandyer.ZombieDuel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BA1DA8D1D1B867A00FF28D4 /* Build configuration list for PBXProject "ZombieDuel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA1DAA71D1B867B00FF28D4 /* Debug */,
+				2BA1DAA81D1B867B00FF28D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA1DAA91D1B867B00FF28D4 /* Build configuration list for PBXNativeTarget "ZombieDuel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA1DAAA1D1B867B00FF28D4 /* Debug */,
+				2BA1DAAB1D1B867B00FF28D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BA1DA8A1D1B867A00FF28D4 /* Project object */;
+}
