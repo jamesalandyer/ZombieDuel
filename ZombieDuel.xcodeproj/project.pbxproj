@@ -31,6 +31,9 @@
 		2BA1DAF41D1B91EF00FF28D4 /* Carl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAF31D1B91EF00FF28D4 /* Carl.m */; };
 		2BA1DAF71D1B920200FF28D4 /* Attack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAF61D1B920200FF28D4 /* Attack.m */; };
 		2BA1DAFA1D1B921600FF28D4 /* Defense.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAF91D1B921600FF28D4 /* Defense.m */; };
+		2BA1DAFD1D1B98B600FF28D4 /* CustomPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */; };
+		2BA1DB001D1B9D1B00FF28D4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAFE1D1B9D1B00FF28D4 /* Roboto-Bold.ttf */; };
+		2BA1DB011D1B9D1B00FF28D4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DAFF1D1B9D1B00FF28D4 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,10 @@
 		2BA1DAF61D1B920200FF28D4 /* Attack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attack.m; sourceTree = "<group>"; };
 		2BA1DAF81D1B921600FF28D4 /* Defense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defense.h; sourceTree = "<group>"; };
 		2BA1DAF91D1B921600FF28D4 /* Defense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defense.m; sourceTree = "<group>"; };
+		2BA1DAFB1D1B98B600FF28D4 /* CustomPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPlayButton.h; sourceTree = "<group>"; };
+		2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPlayButton.m; sourceTree = "<group>"; };
+		2BA1DAFE1D1B9D1B00FF28D4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		2BA1DAFF1D1B9D1B00FF28D4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +124,7 @@
 				2BA1DAB01D1B87BA00FF28D4 /* Controller */,
 				2BA1DAAC1D1B876C00FF28D4 /* Assets */,
 				2BA1DA951D1B867A00FF28D4 /* Supporting Files */,
+				2BA1DB021D1B9D2D00FF28D4 /* Resources */,
 			);
 			path = ZombieDuel;
 			sourceTree = "<group>";
@@ -175,6 +183,8 @@
 		2BA1DAAF1D1B87B400FF28D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BA1DAFB1D1B98B600FF28D4 /* CustomPlayButton.h */,
+				2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -361,6 +371,15 @@
 			name = Carl;
 			sourceTree = "<group>";
 		};
+		2BA1DB021D1B9D2D00FF28D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DAFE1D1B9D1B00FF28D4 /* Roboto-Bold.ttf */,
+				2BA1DAFF1D1B9D1B00FF28D4 /* Roboto-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +439,8 @@
 			files = (
 				2BA1DAA51D1B867B00FF28D4 /* LaunchScreen.storyboard in Resources */,
 				2BA1DAA21D1B867B00FF28D4 /* Assets.xcassets in Resources */,
+				2BA1DB011D1B9D1B00FF28D4 /* Roboto-Regular.ttf in Resources */,
+				2BA1DB001D1B9D1B00FF28D4 /* Roboto-Bold.ttf in Resources */,
 				2BA1DAA01D1B867A00FF28D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +456,7 @@
 				2BA1DA9D1D1B867A00FF28D4 /* StartVC.m in Sources */,
 				2BA1DAFA1D1B921600FF28D4 /* Defense.m in Sources */,
 				2BA1DA9A1D1B867A00FF28D4 /* AppDelegate.m in Sources */,
+				2BA1DAFD1D1B98B600FF28D4 /* CustomPlayButton.m in Sources */,
 				2BA1DAF11D1B91E200FF28D4 /* Bob.m in Sources */,
 				2BA1DADF1D1B919B00FF28D4 /* Jack.m in Sources */,
 				2BA1DAEB1D1B91CA00FF28D4 /* Kip.m in Sources */,
@@ -602,6 +624,7 @@
 				2BA1DAAB1D1B867B00FF28D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
