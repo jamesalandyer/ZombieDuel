@@ -10,4 +10,27 @@
 
 @implementation Carl
 
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        [self setName:@"CARL"];
+        [self setFullHP:(NSInteger)100];
+        [self setCoinValue:(NSInteger)7];
+        
+        NSArray *mummyWrap = [NSArray arrayWithObjects:@"CARL MISSED YOU!", @"CARL WRAPPED PART OF YOU LIKE A MUMMY!", @"CARL WRAPPED YOU UP LIKE A MUMMY!", nil];
+        NSArray *lick = [NSArray arrayWithObjects:@"CARL TRIED TO LICK YOU!", @"CARL LICKED YOU!", @"CARL'S LICK WAS DISGUSTING!", nil];
+        NSArray *roll = [NSArray arrayWithObjects:@"CARL ROLLED THE WRONG WAY!", @"CARL ROLLED IN TO YOU!", @"CARL TOOK YOU OUT WITH HIS ROLL!", nil];
+        NSArray *infection = [NSArray arrayWithObjects:@"CARL'S INFECTION KILLED HER!", @"CARL'S INFECTION MIGHT SPREAD TO YOU!", @"CARL'S INFECTION DIDN'T HOLD", nil];
+        
+        NSDictionary *attacks = [NSDictionary dictionaryWithObjectsAndKeys:mummyWrap, @"Mummy Wrap", lick , @"Lick", roll, @"Roll", infection, @"Infection", nil];
+        NSDictionary *attacksDamage = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:20], @"Mummy Wrap", [NSNumber numberWithInt:10], @"Lick", [NSNumber numberWithInt:15], @"Roll", [NSNumber numberWithInt:10], @"Infection", nil];
+        
+        [self setAttack:[[Attack alloc]initWithAttacks:attacks withDamage:attacksDamage]];
+        [self setDefense:[[Defense alloc]initWithHP:[self fullHP]]];
+    }
+    
+    return self;
+}
+
 @end

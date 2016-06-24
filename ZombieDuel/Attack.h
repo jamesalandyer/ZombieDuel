@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Attack : NSObject
-
+- (instancetype)initWithAttacks: (NSDictionary*)attacks withDamage: (NSDictionary*)damage;
+- (NSMutableDictionary*)attackWithAttack: (NSNumber*)attack;
 @end

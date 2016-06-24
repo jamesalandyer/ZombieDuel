@@ -9,5 +9,5 @@
 #import "Player.h"
 
 @interface Hank : Player
-
+- (instancetype)init;
 @end

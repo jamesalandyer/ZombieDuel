@@ -7,7 +7,9 @@
 //
 
 #import "Player.h"
+#import "Attack.h"
+#import "Defense.h"
 
 @interface Hunter : Player
-
+- (instancetype)init;
 @end

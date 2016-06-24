@@ -9,5 +9,5 @@
 #import "Character.h"
 
 @interface Player : Character
-
+- (void)increaseHP: (NSInteger)amount;
 @end

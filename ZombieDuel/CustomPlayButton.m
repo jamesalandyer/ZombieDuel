@@ -10,7 +10,7 @@
 
 @implementation CustomPlayButton
 
--(void)awakeFromNib {
+- (void)awakeFromNib {
     [super awakeFromNib];
     
     self.layer.cornerRadius = self.layer.frame.size.width / 2;

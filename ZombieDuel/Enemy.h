@@ -9,5 +9,5 @@
 #import "Character.h"
 
 @interface Enemy : Character
-
+@property (nonatomic) NSInteger coinValue;
 @end

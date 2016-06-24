@@ -9,5 +9,5 @@
 #import "Enemy.h"
 
 @interface Carl : Enemy
-
+- (instancetype)init;
 @end

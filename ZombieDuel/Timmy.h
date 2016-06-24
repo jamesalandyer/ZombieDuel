@@ -9,5 +9,5 @@
 #import "Enemy.h"
 
 @interface Timmy : Enemy
-
+- (instancetype)init;
 @end

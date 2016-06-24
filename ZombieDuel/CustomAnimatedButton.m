@@ -10,7 +10,7 @@
 
 @implementation CustomAnimatedButton
 
--(void) imageAnimationWithName:(NSString* _Nonnull)name withState:(NSString* _Nonnull)state withImageNumber:(int)imageNumber {
+- (void)imageAnimationWithName:(NSString* _Nonnull)name withState:(NSString* _Nonnull)state withImageNumber:(int)imageNumber {
     
     if ([state isEqual: @"idle"])
         [[self imageView] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@%@1.png", name, state]]];

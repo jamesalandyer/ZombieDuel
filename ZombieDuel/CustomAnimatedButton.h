@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomAnimatedButton : UIButton
--(void) imageAnimationWithName:(NSString*)name withState:(NSString*)state withImageNumber:(int)imageNumber;
+- (void)imageAnimationWithName:(NSString*)name withState:(NSString*)state withImageNumber:(int)imageNumber;
 @end

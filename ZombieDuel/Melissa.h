@@ -9,5 +9,5 @@
 #import "Enemy.h"
 
 @interface Melissa : Enemy
-
+- (instancetype)init;
 @end

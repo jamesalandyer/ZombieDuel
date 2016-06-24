@@ -20,7 +20,7 @@
     NSInteger highScore = (NSInteger)[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"];
     
     if (highScore)
-        _highScoreLabel.text = [NSString stringWithFormat:@"%d", highScore];
+        _highScoreLabel.text = [NSString stringWithFormat:@"%ld", (long)highScore];
     else
         _highScoreLabel.text = @"00";
 }

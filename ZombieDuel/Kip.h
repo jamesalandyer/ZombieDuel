@@ -9,5 +9,5 @@
 #import "Enemy.h"
 
 @interface Kip : Enemy
-
+- (instancetype)init;
 @end

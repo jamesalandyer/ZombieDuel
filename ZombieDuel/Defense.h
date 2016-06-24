@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Defense : NSObject
-
+@property (nonatomic) NSInteger currentHP;
+- (instancetype)initWithHP: (NSInteger)hp;
+- (void)resetHP: (NSInteger)fullHP;
+- (NSInteger)inflictDamage: (NSInteger)damage;
 @end

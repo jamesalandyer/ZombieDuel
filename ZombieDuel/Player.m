@@ -10,4 +10,8 @@
 
 @implementation Player
 
+- (void)increaseHP: (NSInteger)amount {
+    [self setFullHP:amount];
+}
+
 @end

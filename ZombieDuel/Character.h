@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Attack.h"
+#import "Defense.h"
 
 @interface Character : NSObject
-
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSInteger fullHP;
+@property (nonatomic) Attack *attack;
+@property (nonatomic) Defense *defense;
 @end
