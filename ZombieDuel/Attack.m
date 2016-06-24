@@ -21,6 +21,7 @@
     if (self) {
         [self setAttacks:attacks];
         [self setDamage:damage];
+        [self setExtraDamage:0];
     }
     
     return self;
@@ -31,7 +32,7 @@
     NSArray *allAttackNames = [[self attacks] allKeys];
     NSString *attackName = [allAttackNames objectAtIndex:(NSUInteger)attack];
     NSArray *attackMessages = (NSArray*)[[self damage] objectForKey:attackName];
-    NSNumber *attackDamage = (NSNumber*)[[self damage] objectForKey:attackName];
+    NSNumber *attackDamage = [NSNumber numberWithInteger:(NSInteger)[[self damage] objectForKey:attackName] + _extraDamage];
     NSMutableDictionary *attackResult = [[NSMutableDictionary alloc]init];
     
     if ([attack isEqualToNumber:[NSNumber numberWithInteger:1]]) {

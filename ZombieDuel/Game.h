@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Enemy.h"
 #import "Store.h"
+#import "Turn.h"
 
 @interface Game : NSObject
 @property (nonatomic) Store *store;
+@property (nonatomic) Turn *turn;
 - (Enemy*)createEnemy;
 - (void)updateLevel;
 - (instancetype)init;

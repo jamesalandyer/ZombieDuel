@@ -17,6 +17,7 @@
 #import "Sally.h"
 #import "Carl.h"
 #import "Store.h"
+#import "Turn.h"
 
 
 @interface Game ()
@@ -36,6 +37,7 @@
         [self setCurrentLevel:1];
         [self setHighestLevel:(NSInteger)[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"]];
         [self setStore:[[Store alloc]init]];
+        [self setTurn:[[Turn alloc]init]];
     }
         
     return self;
@@ -70,6 +72,8 @@
     [self setBossLevelCount:_bossLevelCount + 1];
     if (_currentLevel > _highestLevel)
         [[NSUserDefaults standardUserDefaults] setInteger:_currentLevel forKey:@"HighScore"];
+    if (_bossLevelCount == 10)
+        [self setBossLevelCount:0];
 }
 
 @end

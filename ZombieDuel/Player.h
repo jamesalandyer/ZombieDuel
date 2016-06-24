@@ -10,4 +10,5 @@
 
 @interface Player : Character
 - (void)increaseHP: (NSInteger)amount;
+- (void)increaseDamage: (NSInteger)amount;
 @end

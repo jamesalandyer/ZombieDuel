@@ -14,4 +14,8 @@
     [self setFullHP:amount];
 }
 
+- (void)increaseDamage: (NSInteger)amount {
+    [[self attack] setExtraDamage:[[self attack] extraDamage] + amount];
+}
+
 @end
