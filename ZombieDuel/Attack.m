@@ -35,7 +35,7 @@
     NSNumber *attackDamage = [NSNumber numberWithInteger:(NSInteger)[[self damage] objectForKey:attackName] + _extraDamage];
     NSMutableDictionary *attackResult = [[NSMutableDictionary alloc]init];
     
-    if ([attack isEqualToNumber:[NSNumber numberWithInteger:1]]) {
+    if ([attack isEqualToNumber:[NSNumber numberWithInteger:0]]) {
         if (rand >= 14) {
             [attackResult setObject:attackDamage forKey:[attackMessages objectAtIndex:2]];
             return attackResult;
@@ -46,7 +46,7 @@
             [attackResult setObject:[NSNumber numberWithInt:0] forKey:[attackMessages objectAtIndex:0]];
             return attackResult;
         }
-    } else if ([attack isEqualToNumber:[NSNumber numberWithInteger:2]]) {
+    } else if ([attack isEqualToNumber:[NSNumber numberWithInteger:1]]) {
         if (rand >= 10) {
             [attackResult setObject:attackDamage forKey:[attackMessages objectAtIndex:2]];
             return attackResult;
@@ -57,7 +57,7 @@
             [attackResult setObject:[NSNumber numberWithInt:0] forKey:[attackMessages objectAtIndex:0]];
             return attackResult;
         }
-    } else if ([attack isEqualToNumber:[NSNumber numberWithInteger:3]]) {
+    } else if ([attack isEqualToNumber:[NSNumber numberWithInteger:2]]) {
         if (rand >= 12) {
             [attackResult setObject:attackDamage forKey:[attackMessages objectAtIndex:2]];
             return attackResult;
@@ -68,7 +68,7 @@
             [attackResult setObject:[NSNumber numberWithInt:0] forKey:[attackMessages objectAtIndex:0]];
             return attackResult;
         }
-    } else if ([attack isEqualToNumber:[NSNumber numberWithInteger:4]]) {
+    } else if ([attack isEqualToNumber:[NSNumber numberWithInteger:3]]) {
         if (rand >= 16) {
             [attackResult setObject:attackDamage forKey:[attackMessages objectAtIndex:2]];
             return attackResult;

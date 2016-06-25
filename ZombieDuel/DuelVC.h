@@ -10,4 +10,5 @@
 
 @interface DuelVC : UIViewController
 @property (nonatomic) BOOL nightThemeChosen;
+@property (nonatomic) BOOL hunterChosen;
 @end

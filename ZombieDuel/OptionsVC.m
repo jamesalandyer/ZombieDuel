@@ -65,7 +65,6 @@
 }
 
 - (IBAction)startGameButtonPressed:(id)sender {
-    //Create Player
     [self performSegueWithIdentifier:@"showDuelVC" sender:nil];
 }
 
@@ -73,7 +72,7 @@
     //Pass over theme and player
     if ([[segue identifier] isEqualToString:@"showDuelVC"]) {
         DuelVC *duelVC = [segue destinationViewController];
-        
+        [duelVC setHunterChosen:[self hunterChosen]];
         [duelVC setNightThemeChosen:_nightChosen];
     }
 }

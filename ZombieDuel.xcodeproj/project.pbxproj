@@ -39,6 +39,8 @@
 		2BA1DB101D1C679C00FF28D4 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB0F1D1C679C00FF28D4 /* Game.m */; };
 		2BA1DB141D1C690700FF28D4 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB131D1C690700FF28D4 /* Store.m */; };
 		2BA1DB181D1D09DB00FF28D4 /* Turn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB171D1D09DB00FF28D4 /* Turn.m */; };
+		2BA1DB1C1D1DD45A00FF28D4 /* CharacterAnimationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB1B1D1DD45A00FF28D4 /* CharacterAnimationImageView.m */; };
+		2BA1DB1F1D1DEE4100FF28D4 /* CustomCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB1E1D1DEE4100FF28D4 /* CustomCircleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,10 @@
 		2BA1DB131D1C690700FF28D4 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		2BA1DB161D1D09DB00FF28D4 /* Turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turn.h; sourceTree = "<group>"; };
 		2BA1DB171D1D09DB00FF28D4 /* Turn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turn.m; sourceTree = "<group>"; };
+		2BA1DB1A1D1DD45A00FF28D4 /* CharacterAnimationImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterAnimationImageView.h; sourceTree = "<group>"; };
+		2BA1DB1B1D1DD45A00FF28D4 /* CharacterAnimationImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterAnimationImageView.m; sourceTree = "<group>"; };
+		2BA1DB1D1D1DEE4100FF28D4 /* CustomCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCircleButton.h; sourceTree = "<group>"; };
+		2BA1DB1E1D1DEE4100FF28D4 /* CustomCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCircleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,7 @@
 		2BA1DAAF1D1B87B400FF28D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BA1DB191D1DD42D00FF28D4 /* ImageView */,
 				2BA1DB0C1D1BB64800FF28D4 /* Buttons */,
 			);
 			name = View;
@@ -402,6 +409,8 @@
 			children = (
 				2BA1DAFB1D1B98B600FF28D4 /* CustomPlayButton.h */,
 				2BA1DAFC1D1B98B600FF28D4 /* CustomPlayButton.m */,
+				2BA1DB1D1D1DEE4100FF28D4 /* CustomCircleButton.h */,
+				2BA1DB1E1D1DEE4100FF28D4 /* CustomCircleButton.m */,
 				2BA1DB031D1BAE5000FF28D4 /* CustomRoundedButton.h */,
 				2BA1DB041D1BAE5000FF28D4 /* CustomRoundedButton.m */,
 				2BA1DB061D1BAFBB00FF28D4 /* CustomAnimatedButton.h */,
@@ -435,6 +444,15 @@
 				2BA1DB171D1D09DB00FF28D4 /* Turn.m */,
 			);
 			name = Turn;
+			sourceTree = "<group>";
+		};
+		2BA1DB191D1DD42D00FF28D4 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1DB1A1D1DD45A00FF28D4 /* CharacterAnimationImageView.h */,
+				2BA1DB1B1D1DD45A00FF28D4 /* CharacterAnimationImageView.m */,
+			);
+			name = ImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +531,7 @@
 				2BA1DA9D1D1B867A00FF28D4 /* StartVC.m in Sources */,
 				2BA1DAFA1D1B921600FF28D4 /* Defense.m in Sources */,
 				2BA1DB081D1BAFBB00FF28D4 /* CustomAnimatedButton.m in Sources */,
+				2BA1DB1F1D1DEE4100FF28D4 /* CustomCircleButton.m in Sources */,
 				2BA1DB181D1D09DB00FF28D4 /* Turn.m in Sources */,
 				2BA1DA9A1D1B867A00FF28D4 /* AppDelegate.m in Sources */,
 				2BA1DAFD1D1B98B600FF28D4 /* CustomPlayButton.m in Sources */,
@@ -536,6 +555,7 @@
 				2BA1DAD51D1B914D00FF28D4 /* Hunter.m in Sources */,
 				2BA1DADB1D1B918600FF28D4 /* Enemy.m in Sources */,
 				2BA1DAB51D1B8AFD00FF28D4 /* OptionsVC.m in Sources */,
+				2BA1DB1C1D1DD45A00FF28D4 /* CharacterAnimationImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
