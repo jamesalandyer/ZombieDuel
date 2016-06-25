@@ -14,10 +14,11 @@
     self = [super init];
     
     if (self) {
-        [self setName:@"Sally"];
-        [self setFullHP:(NSInteger)100];
-        [self setCoinValue:(NSInteger)7];
+        [self setName:@"SALLY"];
+        [self setFullHP:100];
+        [self setCoinValue:7];
         
+        NSArray *attackNames = [NSArray arrayWithObjects:@"Chase", @"Eye Throw", @"Kick", @"Infection", nil];
         NSArray *chase = [NSArray arrayWithObjects:@"SALLY GOT STUCK!", @"SALLY CHASED YOU!", @"SALLY CHASED YOU INTO A TREE!", nil];
         NSArray *eyeThrow = [NSArray arrayWithObjects:@"SALLY DROPPED HER EYE!", @"SALLY'S EYE BOUNCED OFF OF YOU!", @"SALLY'S EYE HIT YOU IN THE EYE!", nil];
         NSArray *kick = [NSArray arrayWithObjects:@"SALLY CAN'T KICK!", @"SALLY'S KICKS ARE INEFFECTIVE!", @"SALLY HURT YOU WITH HER KICK!", nil];
@@ -26,8 +27,9 @@
         NSDictionary *attacks = [NSDictionary dictionaryWithObjectsAndKeys:chase, @"Chase", eyeThrow , @"Eye Throw", kick, @"Kick", infection, @"Infection", nil];
         NSDictionary *attacksDamage = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:20], @"Chase", [NSNumber numberWithInt:10], @"Eye Throw", [NSNumber numberWithInt:15], @"Kick", [NSNumber numberWithInt:10], @"Infection", nil];
         
-        [self setAttack:[[Attack alloc]initWithAttacks:attacks withDamage:attacksDamage]];
+        [self setAttack:[[Attack alloc]initWithAttacks:attacks withDamage:attacksDamage withAttackNames:attackNames]];
         [self setDefense:[[Defense alloc]initWithHP:[self fullHP]]];
+        [self setDeadImageNumber:5];
     }
     
     return self;

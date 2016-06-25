@@ -12,6 +12,7 @@
 #import "Turn.h"
 
 @interface Game : NSObject
+@property (nonatomic) NSInteger currentLevel;
 @property (nonatomic) Store *store;
 @property (nonatomic) Turn *turn;
 - (Enemy*)createEnemy;

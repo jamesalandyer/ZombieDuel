@@ -22,7 +22,6 @@
 
 @interface Game ()
 
-@property (nonatomic) NSInteger currentLevel;
 @property (nonatomic) NSInteger bossLevelCount;
 @property (nonatomic) NSInteger highestLevel;
 
@@ -44,7 +43,7 @@
 }
 
 - (Enemy*)createEnemy {
-    if (_bossLevelCount == 10) {
+    if (_bossLevelCount == 9) {
         return [[Bob alloc]init];
     } else {
         int rand = arc4random_uniform(21);

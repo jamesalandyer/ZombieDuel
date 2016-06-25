@@ -15,4 +15,5 @@
 @property (nonatomic) NSInteger fullHP;
 @property (nonatomic) Attack *attack;
 @property (nonatomic) Defense *defense;
+@property (nonatomic) NSInteger deadImageNumber;
 @end

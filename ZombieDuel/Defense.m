@@ -23,10 +23,8 @@
     [self setCurrentHP:fullHP];
 }
 
-- (NSInteger)inflictDamage: (NSInteger)damage {
-    [self setCurrentHP:(self.currentHP - damage)];
-    
-    return [self currentHP];
+- (void)inflictDamage: (NSInteger)damage {
+    [self setCurrentHP:(_currentHP - damage)];
 }
 
 @end

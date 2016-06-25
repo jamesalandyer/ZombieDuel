@@ -17,12 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSInteger highScore = (NSInteger)[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"];
+    NSInteger highScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"HighScore"];
     
     if (highScore)
         _highScoreLabel.text = [NSString stringWithFormat:@"%ld", (long)highScore];
     else
-        _highScoreLabel.text = @"00";
+        _highScoreLabel.text = @"0";
 }
 
 - (IBAction)playButtonPressed:(id)sender {

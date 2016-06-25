@@ -22,6 +22,7 @@
             <string>Roboto-Bold</string>
             <string>Roboto-Bold</string>
             <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -607,15 +608,48 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-hP-UyJ" customClass="CustomCircleButton">
+                                <rect key="frame" x="527" y="515" width="65" height="65"/>
+                                <color key="backgroundColor" red="0.6705882353" green="0.83921568629999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="PuI-YT-8lJ"/>
+                                    <constraint firstAttribute="height" constant="65" id="rLD-Wk-TPy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                <color key="tintColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="HXO-Rt-O6D" eventType="touchUpInside" id="BpX-wc-eTH"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4L3-JS-OEp" customClass="CharacterAnimationImageView">
+                                <rect key="frame" x="333" y="404" width="155" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Zjo-wi-h4j"/>
+                                    <constraint firstAttribute="height" constant="140" id="mOs-Ek-WeM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewK-0x-85Z" customClass="CharacterAnimationImageView">
+                                <rect key="frame" x="0.0" y="404" width="155" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="PrN-Cu-WQn"/>
+                                    <constraint firstAttribute="width" constant="155" id="otX-Ux-KtB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rTb-v4-9dC" firstAttribute="bottom" secondItem="ewK-0x-85Z" secondAttribute="bottom" id="0Yq-GM-OCj"/>
+                            <constraint firstItem="MyD-fs-ZId" firstAttribute="bottom" secondItem="4L3-JS-OEp" secondAttribute="bottom" id="0l5-nu-elG"/>
                             <constraint firstItem="vDw-zr-RPc" firstAttribute="leading" secondItem="s7t-AW-NyK" secondAttribute="leading" id="2Bf-s7-qcN"/>
                             <constraint firstItem="vDw-zr-RPc" firstAttribute="trailing" secondItem="EoW-oM-1Bm" secondAttribute="trailing" id="2ez-CJ-f4i"/>
                             <constraint firstItem="mhz-cP-c4o" firstAttribute="top" secondItem="MyD-fs-ZId" secondAttribute="bottom" constant="-2" id="3tW-32-ApN"/>
                             <constraint firstItem="P5L-06-gjf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EoW-oM-1Bm" secondAttribute="trailing" constant="4" id="4lq-0i-oF8"/>
                             <constraint firstItem="mhz-cP-c4o" firstAttribute="top" secondItem="LMo-It-Kl7" secondAttribute="bottom" id="9Nj-Om-rZd"/>
                             <constraint firstItem="MyD-fs-ZId" firstAttribute="leading" secondItem="rTb-v4-9dC" secondAttribute="trailing" priority="750" constant="200" id="9Xd-a8-dMg"/>
+                            <constraint firstItem="MyD-fs-ZId" firstAttribute="trailing" secondItem="4L3-JS-OEp" secondAttribute="trailing" id="BLp-7N-Gds"/>
                             <constraint firstItem="If3-w8-rq5" firstAttribute="top" secondItem="P5L-06-gjf" secondAttribute="bottom" id="Bhr-so-tgC"/>
                             <constraint firstItem="rTb-v4-9dC" firstAttribute="leading" secondItem="s7t-AW-NyK" secondAttribute="leading" id="FDT-Iy-xQM"/>
                             <constraint firstItem="PSu-gv-ByP" firstAttribute="top" secondItem="K8k-kv-ecE" secondAttribute="bottom" constant="8" id="Ftz-hS-Nqp"/>
@@ -633,6 +667,7 @@
                             <constraint firstItem="P5L-06-gjf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDw-zr-RPc" secondAttribute="trailing" constant="4" id="X8f-Wt-T9C"/>
                             <constraint firstItem="Y2Q-8T-dzj" firstAttribute="centerY" secondItem="s7t-AW-NyK" secondAttribute="centerY" id="YC4-g7-fZR"/>
                             <constraint firstItem="43j-VQ-eVk" firstAttribute="leading" secondItem="PSu-gv-ByP" secondAttribute="trailing" constant="20" id="cP5-Ny-Rqj"/>
+                            <constraint firstItem="rTb-v4-9dC" firstAttribute="leading" secondItem="ewK-0x-85Z" secondAttribute="leading" id="cPA-zV-ufh"/>
                             <constraint firstItem="If3-w8-rq5" firstAttribute="top" secondItem="mhz-cP-c4o" secondAttribute="bottom" id="dTG-Uz-gtq"/>
                             <constraint firstItem="mhz-cP-c4o" firstAttribute="top" secondItem="Ndx-BY-3pj" secondAttribute="bottom" id="eaK-In-ROx"/>
                             <constraint firstItem="rTb-v4-9dC" firstAttribute="top" secondItem="EoW-oM-1Bm" secondAttribute="bottom" constant="20" id="gaJ-bY-G8g"/>
@@ -640,6 +675,8 @@
                             <constraint firstItem="8WA-cA-PqT" firstAttribute="top" secondItem="s7t-AW-NyK" secondAttribute="top" id="iJG-GM-EKS"/>
                             <constraint firstItem="MyD-fs-ZId" firstAttribute="leading" secondItem="Ndx-BY-3pj" secondAttribute="trailing" id="jI6-VE-IZq"/>
                             <constraint firstItem="mhz-cP-c4o" firstAttribute="top" secondItem="Ndx-BY-3pj" secondAttribute="bottom" id="jei-Nm-xd0"/>
+                            <constraint firstItem="If3-w8-rq5" firstAttribute="top" secondItem="cTc-hP-UyJ" secondAttribute="bottom" constant="20" id="p14-U8-gaD"/>
+                            <constraint firstAttribute="trailing" secondItem="cTc-hP-UyJ" secondAttribute="trailing" constant="8" id="pV4-LN-ji2"/>
                             <constraint firstAttribute="trailing" secondItem="P5L-06-gjf" secondAttribute="trailing" id="r01-Bd-t1o"/>
                             <constraint firstItem="mhz-cP-c4o" firstAttribute="top" secondItem="rTb-v4-9dC" secondAttribute="bottom" constant="-2" id="tPF-yp-y2n"/>
                             <constraint firstItem="EoW-oM-1Bm" firstAttribute="leading" secondItem="s7t-AW-NyK" secondAttribute="leading" id="xdT-UR-yUO"/>
@@ -655,10 +692,14 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="attackButtons" destination="Y2Q-8T-dzj" id="7Jv-Jm-nHG"/>
+                        <outlet property="enemyDeathImageView" destination="4L3-JS-OEp" id="eh4-0O-fjP"/>
                         <outlet property="enemyHPLabel" destination="gmW-og-cWp" id="c4d-P8-gcX"/>
                         <outlet property="enemyImageView" destination="MyD-fs-ZId" id="TnC-2V-Ptm"/>
                         <outlet property="enemyNameLabel" destination="sAS-Jd-5Pb" id="vco-f0-M6r"/>
                         <outlet property="levelLabel" destination="XpV-KY-6yf" id="rpV-e6-QYj"/>
+                        <outlet property="nextButton" destination="cTc-hP-UyJ" id="0KC-yq-v4f"/>
+                        <outlet property="playerDeathImageView" destination="ewK-0x-85Z" id="VFN-M1-yGs"/>
                         <outlet property="playerHPLabel" destination="Ui4-TS-sCq" id="64n-LX-ZED"/>
                         <outlet property="playerImageView" destination="rTb-v4-9dC" id="Cxi-cR-w7R"/>
                         <outlet property="playerNameLabel" destination="xYl-6W-RuL" id="8zF-uy-1mJ"/>
@@ -667,7 +708,7 @@
                         <outlet property="sawAttackButton" destination="mpY-mI-8co" id="kis-p7-Tat"/>
                         <outlet property="textLabel" destination="waC-ub-DAh" id="8fn-eH-pO7"/>
                         <outlet property="unknownAttackButton" destination="QN2-4e-R9K" id="wZC-ir-Qjb"/>
-                        <segue destination="zSa-5x-Xyh" kind="show" identifier="showStoreVC" id="Doq-pR-pPa"/>
+                        <segue destination="zSa-5x-Xyh" kind="presentation" identifier="showStoreVC" modalPresentationStyle="overCurrentContext" id="Doq-pR-pPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLo-2M-7wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -682,10 +723,22 @@
                         <viewControllerLayoutGuide type="top" id="HPI-au-teW"/>
                         <viewControllerLayoutGuide type="bottom" id="epF-Y8-xXF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Qn3-ii-JKO">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Qn3-ii-JKO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaD-0z-2Xu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eaD-0z-2Xu" secondAttribute="trailing" id="0uo-v4-WNL"/>
+                            <constraint firstItem="eaD-0z-2Xu" firstAttribute="top" secondItem="Qn3-ii-JKO" secondAttribute="top" id="Cwk-Df-e0u"/>
+                            <constraint firstItem="epF-Y8-xXF" firstAttribute="top" secondItem="eaD-0z-2Xu" secondAttribute="bottom" id="MC5-XX-i6B"/>
+                            <constraint firstItem="eaD-0z-2Xu" firstAttribute="leading" secondItem="Qn3-ii-JKO" secondAttribute="leading" id="SNa-Ag-dUu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSE-tG-Rnv" userLabel="First Responder" sceneMemberID="firstResponder"/>

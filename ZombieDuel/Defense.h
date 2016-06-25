@@ -12,5 +12,5 @@
 @property (nonatomic) NSInteger currentHP;
 - (instancetype)initWithHP: (NSInteger)hp;
 - (void)resetHP: (NSInteger)fullHP;
-- (NSInteger)inflictDamage: (NSInteger)damage;
+- (void)inflictDamage: (NSInteger)damage;
 @end
