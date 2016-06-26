@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Game.h"
 
 @interface StoreVC : UIViewController
-
+@property (nonatomic) Game *game;
+@property (nonatomic) BOOL nightTheme;
 @end

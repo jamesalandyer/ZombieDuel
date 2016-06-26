@@ -12,5 +12,5 @@
 
 @interface Turn : NSObject
 - (NSString*)playerTurnWithPlayer: (Player*)player withAttack: (NSNumber*)attack withEnemy: (Enemy*)enemy;
-- (NSString*)enemyTurnWithEnemy: (Enemy*)enemy withPlayer: (Player*)player;
+- (NSString*)enemyTurnWithEnemy: (Enemy*)enemy withPlayer: (Player*)player withMultiplier: (NSInteger)number;
 @end

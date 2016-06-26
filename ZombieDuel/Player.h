@@ -9,6 +9,7 @@
 #import "Character.h"
 
 @interface Player : Character
+@property (nonatomic) NSInteger extraDamage;
 - (void)increaseHP: (NSInteger)amount;
 - (void)increaseDamage: (NSInteger)amount;
 @end

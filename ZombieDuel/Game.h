@@ -17,5 +17,6 @@
 @property (nonatomic) Turn *turn;
 - (Enemy*)createEnemy;
 - (void)updateLevel;
+- (NSInteger)enemyDamageMultiplier;
 - (instancetype)init;
 @end

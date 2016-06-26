@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Attack : NSObject
-@property (nonatomic) NSInteger extraDamage;
 - (instancetype)initWithAttacks: (NSDictionary*)attacks withDamage: (NSDictionary*)damage withAttackNames: (NSArray*)attackNames;
 - (NSMutableDictionary*)attackWithAttack: (NSNumber*)attack;
 @end

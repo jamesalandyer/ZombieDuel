@@ -8,6 +8,7 @@
 
 #import "DuelVC.h"
 #import "Game.h"
+#import "StoreVC.h"
 #import "Player.h"
 #import "Hunter.h"
 #import "Hank.h"
@@ -16,8 +17,11 @@
 #import "CustomCircleButton.h"
 
 @interface DuelVC ()
+@property (weak, nonatomic) IBOutlet UIImageView *background;
+@property (weak, nonatomic) IBOutlet UIImageView *ground;
 @property (weak, nonatomic) IBOutlet CharacterAnimationImageView *playerImageView;
 @property (weak, nonatomic) IBOutlet CharacterAnimationImageView *enemyImageView;
+@property (weak, nonatomic) IBOutlet UILabel *levelTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playerNameLabel;
@@ -32,6 +36,12 @@
 @property (weak, nonatomic) IBOutlet CustomCircleButton *nextButton;
 @property (weak, nonatomic) IBOutlet CharacterAnimationImageView *playerDeathImageView;
 @property (weak, nonatomic) IBOutlet CharacterAnimationImageView *enemyDeathImageView;
+@property (weak, nonatomic) IBOutlet CharacterAnimationImageView *playerInjuredImageView;
+@property (weak, nonatomic) IBOutlet CharacterAnimationImageView *enemyInjuredImageView;
+@property (weak, nonatomic) IBOutlet UIView *restartBackgroundView;
+@property (weak, nonatomic) IBOutlet UIView *restartView;
+@property (weak, nonatomic) IBOutlet CharacterAnimationImageView *restartBobImageView;
+
 @property (nonatomic) Game *game;
 @property (nonatomic) Player *player;
 @property (nonatomic) Enemy *enemy;
@@ -53,7 +63,13 @@
         [_playerSpecialAttackButton setImage:[UIImage imageNamed:@"axe.png"] forState:UIControlStateNormal];
     }
     
+    if (!_nightThemeChosen)
+        [self setDayTheme];
+    
     [self setUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(increaseAttack:) name:@"attack" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(increaseHealth:) name:@"health" object:nil];
 }
 
 - (IBAction)attackButtonPressed:(id)sender {
@@ -61,48 +77,54 @@
     NSString *result = [[_game turn] playerTurnWithPlayer:_player withAttack:[NSNumber numberWithInteger:[sender tag]] withEnemy:_enemy];
     [_textLabel setText:result];
     NSInteger newEnemyHP = [[_enemy defense] currentHP];
+    NSInteger newPlayerHP = [[_player defense] currentHP];
     if (newEnemyHP > 0) {
-        [self characterImageInjuredWithCharacter:_enemy];
+        if (newPlayerHP > 0)
+            [self enemyInjured];
         [_enemyHPLabel setText:[NSString stringWithFormat:@"%ld HP", (long)newEnemyHP]];
+        _nextButton.hidden = false;
     } else {
         [_enemyHPLabel setText:@"0"];
         [self enemyDied];
     }
-    NSInteger newPlayerHP = [[_player defense] currentHP];
     if (newPlayerHP <= 0) {
         [_playerHPLabel setText:@"0"];
         [self playerDied];
-    } else {
-        _nextButton.hidden = false;
     }
 }
 
 - (IBAction)nextButtonPressed:(id)sender {
-    if ([[_nextButton currentTitle] isEqualToString:@"NEXT LEVEL"]) {
+    if ([[_nextButton currentTitle] isEqualToString:@"STORE"]) {
         [self performSegueWithIdentifier:@"showStoreVC" sender:nil];
         [self setUI];
     } else if ([[_nextButton currentTitle] isEqualToString:@"EXIT"]) {
-        [self performSegueWithIdentifier:@"showRestartVC" sender:nil];
+        [self showRestart];
     } else {
         _nextButton.hidden = true;
-        NSString *result = [[_game turn]enemyTurnWithEnemy:_enemy withPlayer:_player];
+        NSString *result = [[_game turn]enemyTurnWithEnemy:_enemy withPlayer:_player withMultiplier:[_game enemyDamageMultiplier]];
         [_textLabel setText:result];
         NSInteger newPlayerHP = [[_player defense] currentHP];
+        NSInteger newEnemyHP = [[_enemy defense] currentHP];
         if (newPlayerHP > 0) {
-            [self characterImageInjuredWithCharacter:_player];
+            if (newEnemyHP > 0)
+                [self playerInjured];
             [_playerHPLabel setText:[NSString stringWithFormat:@"%ld HP", (long)newPlayerHP]];
         } else {
             [_playerHPLabel setText:@"0"];
             [self playerDied];
         }
-        NSInteger newEnemyHP = [[_enemy defense] currentHP];
         if (newEnemyHP <= 0) {
             [_enemyHPLabel setText:@"0"];
             [self enemyDied];
-        } else {
-            _attackButtons.hidden = false;
         }
+        
+        if (newEnemyHP > 0 && newPlayerHP > 0)
+            _attackButtons.hidden = false;
     }
+}
+
+- (IBAction)tryAgainButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setUI {
@@ -118,14 +140,64 @@
     [_enemyHPLabel setText:[NSString stringWithFormat:@"%ld HP", (long)[_enemy fullHP]]];
     
     [_playerNameLabel setText:[_player name]];
-    [_playerHPLabel setText:[NSString stringWithFormat:@"%ld HP", (long)[_enemy fullHP]]];
+    [_playerHPLabel setText:[NSString stringWithFormat:@"%ld HP", (long)[_player fullHP]]];
     
     [_levelLabel setText:[NSString stringWithFormat:@"%ld", (long)[_game currentLevel]]];
     [_textLabel setText:[NSString stringWithFormat:@"%@ HAS CHALLENGED YOU TO A DUEL", [_enemy name]]];
 }
 
-- (void)characterImageInjuredWithCharacter: (Character*)character {
-    NSLog(@"Injured");
+- (void)setDayTheme {
+    UIColor *dayColor = [UIColor colorWithRed: (255.0 / 255.0) green: (207.0 / 255.0) blue:(109.0 / 255.0) alpha:1.0];
+    [_background setImage:[UIImage imageNamed:@"background_day.png"]];
+    [_ground setImage:[UIImage imageNamed:@"ground_day.png"]];
+    
+    [_levelTextLabel setTextColor:dayColor];
+    [_levelLabel setTextColor:dayColor];
+    [_nextButton setBackgroundColor:dayColor];
+    [_playerHPLabel setTextColor:dayColor];
+    [_enemyHPLabel setTextColor:dayColor];
+    
+    [_playerSpecialAttackButton setBackgroundColor:dayColor];
+    [_pumpkinAttackButton setBackgroundColor:dayColor];
+    [_sawAttackButton setBackgroundColor:dayColor];
+    [_unknownAttackButton setBackgroundColor:dayColor];
+}
+
+- (void)showRestart {
+    [_restartBobImageView imageAnimationWithName:@"bob_" withState:@"idle" withImageNumber:6];
+    _restartBackgroundView.hidden = false;
+    _restartView.hidden = false;
+}
+
+- (void)playerInjured {
+    [_playerInjuredImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_injured.png", [[_player name] lowercaseString]]]];
+    _playerInjuredImageView.hidden = false;
+    [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(hidePlayerInjured) userInfo:nil repeats:false];
+}
+
+- (void)hidePlayerInjured {
+    _playerInjuredImageView.hidden = true;
+}
+
+- (void)enemyInjured {
+    [_enemyInjuredImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_injured.png", [[_enemy name] lowercaseString]]]];
+    _enemyInjuredImageView.hidden = false;
+    [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(hideEnemyInjured) userInfo:nil repeats:false];
+}
+
+- (void)hideEnemyInjured {
+    _enemyInjuredImageView.hidden = true;
+}
+
+- (void)increaseAttack:(NSNotification *)notification {
+    NSNumber *increaseAmount = (NSNumber*)[notification object];
+    [_player increaseDamage:increaseAmount.integerValue];
+}
+
+- (void)increaseHealth:(NSNotification *)notification {
+    NSNumber *increaseAmount = (NSNumber*)[notification object];
+    [_player increaseHP:increaseAmount.integerValue];
+    [_playerHPLabel setText:[NSString stringWithFormat:@"%ld HP", (long)[_player fullHP]]];
 }
 
 - (void)playerDied {
@@ -143,9 +215,20 @@
     _enemyImageView.hidden = true;
     [_enemyDeathImageView imageAnimationWithName:[NSString stringWithFormat:@"%@_", [[_enemy name] lowercaseString]] withState:@"dead" withImageNumber:(int)[_enemy deadImageNumber]];
     [[_game store] getCoinsForKill:[_enemy coinValue]];
+    if ([[_enemy defense] currentHP] > -500)
+        [_textLabel setText:[NSString stringWithFormat:@"YOU KILLED %@", [_enemy name]]];
     [_game updateLevel];
-    [_nextButton setTitle:@"NEXT LEVEL" forState:UIControlStateNormal];
+    [[_player defense] resetHP:[_player fullHP]];
+    [_nextButton setTitle:@"STORE" forState:UIControlStateNormal];
     _nextButton.hidden = false;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showStoreVC"]) {
+        StoreVC *storeVC = [segue destinationViewController];
+        [storeVC setGame:_game];
+        [storeVC setNightTheme:[self nightThemeChosen]];
+    }
 }
 
 @end

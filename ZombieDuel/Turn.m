@@ -28,26 +28,28 @@
         Hunter *currentPlayer = (Hunter*)player;
         NSMutableDictionary *playerAttack = [[currentPlayer attack] attackWithAttack:attack];
         NSNumber *damageAmount = (NSNumber*)[[playerAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue + [player extraDamage])];
         if (damageAmount.integerValue == 1000)
             [[player defense] inflictDamage:damageAmount.integerValue];
         else
-            [[enemy defense] inflictDamage:damageAmount.integerValue];
+            [[enemy defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[playerAttack allKeys] objectAtIndex:0];
     } else if ((Hank*)player) {
         Hank *currentPlayer = (Hank*)player;
         NSMutableDictionary *playerAttack = [[currentPlayer attack] attackWithAttack:attack];
         NSNumber *damageAmount = (NSNumber*)[[playerAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue + [player extraDamage])];
         if (damageAmount.integerValue == 1000)
             [[player defense] inflictDamage:damageAmount.integerValue];
         else
-            [[enemy defense] inflictDamage:damageAmount.integerValue];
+            [[enemy defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[playerAttack allKeys] objectAtIndex:0];
     }
     
     return nil;
 }
 
-- (NSString*)enemyTurnWithEnemy: (Enemy*)enemy withPlayer: (Player*)player {
+- (NSString*)enemyTurnWithEnemy: (Enemy*)enemy withPlayer: (Player*)player withMultiplier: (NSInteger)number {
     int rand = (arc4random_uniform(4));
     
     if ((Jack*)enemy) {

@@ -11,11 +11,12 @@
 @implementation Player
 
 - (void)increaseHP: (NSInteger)amount {
-    [self setFullHP:amount];
+    [self setFullHP:([self fullHP] + amount)];
+    [[self defense] resetHP:[self fullHP]];
 }
 
 - (void)increaseDamage: (NSInteger)amount {
-    [[self attack] setExtraDamage:[[self attack] extraDamage] + amount];
+    [self setExtraDamage: (_extraDamage + amount)];
 }
 
 @end

@@ -21,10 +21,9 @@
 
 
 @interface Game ()
-
 @property (nonatomic) NSInteger bossLevelCount;
 @property (nonatomic) NSInteger highestLevel;
-
+@property (nonatomic) NSInteger healthIncrease;
 @end
 
 @implementation Game
@@ -48,31 +47,59 @@
     } else {
         int rand = arc4random_uniform(21);
         
-        if (rand >= 19)
-            return [[Jack alloc]init];
-        else if (rand >= 17)
-            return [[Melissa alloc]init];
-        else if (rand >= 15)
-            return [[Timmy alloc]init];
-        else if (rand >= 12)
-            return [[Johnny alloc]init];
-        else if (rand >= 8)
-            return [[Kip alloc]init];
-        else if (rand >= 5)
-            return [[Sally alloc]init];
-        else
-            return [[Carl alloc]init];
+        if (rand >= 19) {
+            Jack *jack = [[Jack alloc]init];
+            [jack setFullHP:([jack fullHP] + _healthIncrease)];
+            return jack;
+        } else if (rand >= 17) {
+            Melissa *melissa = [[Melissa alloc]init];
+            [melissa setFullHP:([melissa fullHP] + _healthIncrease)];
+            return melissa;
+        } else if (rand >= 15) {
+            Timmy *timmy = [[Timmy alloc]init];
+            [timmy setFullHP:([timmy fullHP] + _healthIncrease)];
+            return timmy;
+        } else if (rand >= 12) {
+            Johnny *johnny = [[Johnny alloc]init];
+            [johnny setFullHP:([johnny fullHP] + _healthIncrease)];
+            return johnny;
+        } else if (rand >= 8) {
+            Kip *kip = [[Kip alloc]init];
+            [kip setFullHP:([kip fullHP] + _healthIncrease)];
+            return kip;
+        } else if (rand >= 5) {
+            Sally *sally = [[Sally alloc]init];
+            [sally setFullHP:([sally fullHP] + _healthIncrease)];
+            return sally;
+        } else {
+            Carl *carl = [[Carl alloc]init];
+            [carl setFullHP:([carl fullHP] + _healthIncrease)];
+            return carl;
+        }
     }
         
+}
+
+- (NSInteger)enemyDamageMultiplier {
+    NSInteger number = ceil(_currentLevel * 0.5);
+    
+    return number;
+}
+
+- (void)increaseEnemyHealth {
+    [self setHealthIncrease:_healthIncrease + 50];
 }
 
 - (void)updateLevel {
     [self setCurrentLevel:_currentLevel + 1];
     [self setBossLevelCount:_bossLevelCount + 1];
+    
     if (_currentLevel > _highestLevel)
         [[NSUserDefaults standardUserDefaults] setInteger:_currentLevel forKey:@"HighScore"];
-    if (_bossLevelCount == 10)
+    if (_bossLevelCount == 10) {
+        [self increaseEnemyHealth];
         [self setBossLevelCount:0];
+    }
 }
 
 @end

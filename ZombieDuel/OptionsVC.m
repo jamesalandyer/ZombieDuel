@@ -69,7 +69,6 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //Pass over theme and player
     if ([[segue identifier] isEqualToString:@"showDuelVC"]) {
         DuelVC *duelVC = [segue destinationViewController];
         [duelVC setHunterChosen:[self hunterChosen]];
