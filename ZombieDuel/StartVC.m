@@ -19,6 +19,8 @@
 
 @implementation StartVC
 
+#pragma mark Stack
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -39,6 +41,8 @@
     [_playerAnimation animateOnScreen];
     [_enemyAnimation animateOnScreen];
 }
+
+#pragma mark Actions
 
 - (IBAction)playButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"showOptionsVC" sender:nil];

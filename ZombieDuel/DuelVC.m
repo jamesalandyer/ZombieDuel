@@ -50,6 +50,8 @@
 
 @implementation DuelVC
 
+#pragma mark Stack
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -83,6 +85,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(increaseAttack:) name:@"attack" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(increaseHealth:) name:@"health" object:nil];
 }
+
+#pragma mark Actions
 
 - (IBAction)attackButtonPressed:(id)sender {
     _attackButtons.hidden = true;
@@ -139,6 +143,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark Adjusting UI
+
+/**
+ * Sets up the UI for the start of a level.
+ */
 - (void)setUI {
     _enemyImageView.hidden = false;
     _enemyDeathImageView.hidden = true;
@@ -158,6 +167,9 @@
     [_textLabel setText:[NSString stringWithFormat:@"%@ HAS CHALLENGED YOU TO A DUEL", [_enemy name]]];
 }
 
+/**
+ * Sets the UI to show the day theme.
+ */
 - (void)setDayTheme {
     UIColor *dayColor = [UIColor colorWithRed: (255.0 / 255.0) green: (207.0 / 255.0) blue:(109.0 / 255.0) alpha:1.0];
     [_background setImage:[UIImage imageNamed:@"background_day.png"]];
@@ -175,12 +187,20 @@
     [_unknownAttackButton setBackgroundColor:dayColor];
 }
 
+/**
+ * Shows a screen to allow you to restart.
+ */
 - (void)showRestart {
     [_restartBobImageView imageAnimationWithName:@"bob_" withState:@"idle" withImageNumber:6];
     _restartBackgroundView.hidden = false;
     _restartView.hidden = false;
 }
 
+#pragma mark Injured Animation
+
+/**
+ * Shows the imageview with the player as being injured.
+ */
 - (void)playerInjured {
     [self playInjuredSound];
     [_playerInjuredImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_injured.png", [[_player name] lowercaseString]]]];
@@ -188,10 +208,16 @@
     [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(hidePlayerInjured) userInfo:nil repeats:false];
 }
 
+/**
+ * Hides the imageview for the player.
+ */
 - (void)hidePlayerInjured {
     _playerInjuredImageView.hidden = true;
 }
 
+/**
+ * Shows the imageview with the enemy as being injured.
+ */
 - (void)enemyInjured {
     [self playInjuredSound];
     [_enemyInjuredImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_injured.png", [[_enemy name] lowercaseString]]]];
@@ -199,21 +225,41 @@
     [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(hideEnemyInjured) userInfo:nil repeats:false];
 }
 
+/**
+ * Hides the imageview for the enemy.
+ */
 - (void)hideEnemyInjured {
     _enemyInjuredImageView.hidden = true;
 }
 
+#pragma mark Purchase Changes
+
+/**
+ * Increases the players attack.
+ *
+ * @param notification The notification being recieved.
+ */
 - (void)increaseAttack:(NSNotification *)notification {
     NSNumber *increaseAmount = (NSNumber*)[notification object];
     [_player increaseDamage:increaseAmount.integerValue];
 }
 
+/**
+ * Increases the players health.
+ *
+ * @param notification The notification being recieved.
+ */
 - (void)increaseHealth:(NSNotification *)notification {
     NSNumber *increaseAmount = (NSNumber*)[notification object];
     [_player increaseHP:increaseAmount.integerValue];
     [_playerHPLabel setText:[NSString stringWithFormat:@"%ld HP", (long)[_player fullHP]]];
 }
 
+#pragma mark Death Animation
+
+/**
+ * Starts the animation for when the player dies.
+ */
 - (void)playerDied {
     [self playDeathSound];
     _playerDeathImageView.hidden = false;
@@ -225,6 +271,9 @@
     _nextButton.hidden = false;
 }
 
+/**
+ * Starts the animation for when the enemy dies.
+ */
 - (void)enemyDied {
     [self playDeathSound];
     _enemyDeathImageView.hidden = false;
@@ -239,6 +288,8 @@
     _nextButton.hidden = false;
 }
 
+#pragma mark Segue
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showStoreVC"]) {
         StoreVC *storeVC = [segue destinationViewController];
@@ -247,12 +298,20 @@
     }
 }
 
+#pragma mark Sounds
+
+/**
+ * Plays the sound when a character gets injured.
+ */
 - (void)playInjuredSound {
     if (_sfxInjured.playing)
         [_sfxInjured stop];
     [_sfxInjured play];
 }
 
+/**
+ * Plays the sound when a character dies.
+ */
 - (void)playDeathSound {
     if (_sfxDeath.playing)
         [_sfxDeath stop];

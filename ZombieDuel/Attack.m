@@ -28,6 +28,13 @@
     return self;
 }
 
+/**
+ * Randomly selects the attack's message and damage amount based on the attack.
+ *
+ * @param attack The attack to be used.
+ *
+ * @return A dictionary of the attacks message with the attacks damage.
+ */
 - (NSMutableDictionary*)attackWithAttack: (NSNumber*)attack {
     int rand = arc4random_uniform(18);
     NSString *attackName = (NSString*)[_attackNames objectAtIndex:attack.intValue];

@@ -41,6 +41,9 @@
     return self;
 }
 
+/**
+ * Creates a new random enemy or creates bob every 10 levels.
+ */
 - (Enemy*)createEnemy {
     if (_bossLevelCount == 9) {
         return [[Bob alloc]init];
@@ -80,16 +83,25 @@
         
 }
 
+/**
+ * A multiplier to increase enemy damage as the levels go on.
+ */
 - (NSInteger)enemyDamageMultiplier {
     NSInteger number = ceil(_currentLevel * 0.5);
     
     return number;
 }
 
+/**
+ * A health increse of 50 every 10 levels as the game goes on.
+ */
 - (void)increaseEnemyHealth {
     [self setHealthIncrease:_healthIncrease + 50];
 }
 
+/**
+ * Updates the level, checks whether to save it as a high score and increases the boss level count.
+ */
 - (void)updateLevel {
     [self setCurrentLevel:_currentLevel + 1];
     [self setBossLevelCount:_bossLevelCount + 1];

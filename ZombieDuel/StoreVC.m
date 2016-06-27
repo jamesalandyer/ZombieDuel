@@ -24,6 +24,8 @@
 
 @implementation StoreVC
 
+#pragma mark Stack
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -48,6 +50,8 @@
     if (!_nightTheme)
         [self setDayTheme];
 }
+
+#pragma mark Actions
 
 - (IBAction)purchaseButton:(id)sender {
     int coinAmount;
@@ -78,6 +82,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark Purchase
+
+/**
+ * Changes the text color based on whether a purchase went through.
+ *
+ * @param failed A bool of whether the purchase failed.
+ */
 - (void)purchaseFailed: (BOOL)failed {
     if (failed) {
         [self playFailedSound];
@@ -92,11 +103,19 @@
     [NSTimer scheduledTimerWithTimeInterval:0.35 target:self selector:@selector(revertLabel) userInfo:nil repeats:false];
 }
 
+/**
+ * Changes the text color back to white.
+ */
 - (void)revertLabel {
     [_currentSuppliesLabel setTextColor:[UIColor whiteColor]];
     [_suppliesLabel setTextColor:[UIColor whiteColor]];
 }
 
+#pragma mark Theme
+
+/**
+ * Sets the day theme for the buttons.
+ */
 - (void)setDayTheme {
     UIColor *dayColor = [UIColor colorWithRed: (255.0 / 255.0) green: (207.0 / 255.0) blue:(109.0 / 255.0) alpha:1.0];
     [_bulletProofVestButton setBackgroundColor:dayColor];
@@ -106,12 +125,20 @@
     [_nextLevelButton setBackgroundColor:dayColor];
 }
 
+#pragma mark Sounds
+
+/**
+ * Plays a sound when the purchase is a success.
+ */
 - (void)playSuccessSound {
     if (_sfxSuccess.playing)
         [_sfxSuccess stop];
     [_sfxSuccess play];
 }
 
+/**
+ * Plays a sound when the purchase fails.
+ */
 - (void)playFailedSound {
     if (_sfxFailed.playing)
         [_sfxFailed stop];

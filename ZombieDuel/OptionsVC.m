@@ -22,6 +22,8 @@
 
 @implementation OptionsVC
 
+#pragma mark Stack
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,6 +42,8 @@
     _hunterChosen = YES;
     _nightChosen = YES;
 }
+
+#pragma mark Actions
 
 - (IBAction)nightThemeButtonPressed:(id)sender {
     [self playClickSound];
@@ -81,6 +85,8 @@
     [self performSegueWithIdentifier:@"showDuelVC" sender:nil];
 }
 
+#pragma mark Segue
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDuelVC"]) {
         DuelVC *duelVC = [segue destinationViewController];
@@ -89,6 +95,11 @@
     }
 }
 
+#pragma mark Sounds
+
+/**
+ * Sound when you click a button.
+ */
 - (void)playClickSound {
     if (_sfxClick.playing)
         [_sfxClick stop];

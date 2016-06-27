@@ -19,6 +19,11 @@
 
 @implementation AnimationEngine
 
+/**
+ * Sets the constraint off the right side of the screen.
+ *
+ * @param con The constraint to animate.
+ */
 - (instancetype)initRightSideWithConstraint: (NSLayoutConstraint*)con {
     [self createSound];
     
@@ -31,6 +36,11 @@
     return self;
 }
 
+/**
+ * Sets the constraint off the left side of the screen.
+ *
+ * @param con The constraint to animate.
+ */
 - (instancetype)initLeftSideWithConstraint: (NSLayoutConstraint*)con {
     [self createSound];
     
@@ -43,6 +53,9 @@
     return self;
 }
 
+/**
+ * Animates the constraint back to the original location.
+ */
 - (void)animateOnScreen {
     [self playTitleSound];
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)((double)0.75 * (double)NSEC_PER_SEC));
@@ -56,6 +69,9 @@
     });
 }
 
+/**
+ * Creates the sound of the animation moving.
+ */
 - (void)createSound {
     @try {
         _sfxTitle = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"title" ofType:@"wav"]] error:nil];
@@ -66,6 +82,10 @@
         NSLog(@"%@", exception.debugDescription);
     }
 }
+
+/**
+ * Plays the sound of the animation moving.
+ */
 - (void)playTitleSound {
     if (_sfxTitle.playing)
         [_sfxTitle stop];

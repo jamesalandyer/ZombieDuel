@@ -22,6 +22,13 @@
 
 @implementation Turn
 
+/**
+ * Executes the player's turn and inflicts the damage.
+ *
+ * @param player The player whose turn it is.
+ * @param attack The chosen attack.
+ * @param enemy The enemy the player is attacking.
+ */
 - (NSString*)playerTurnWithPlayer: (Player*)player withAttack: (NSNumber*)attack withEnemy: (Enemy*)enemy {
     
     if ((Hunter*)player) {
@@ -49,6 +56,13 @@
     return nil;
 }
 
+/**
+ * Executes the enemy's turn and inflicts the damage.
+ *
+ * @param enemy The enemy whose turn it is.
+ * @param player The player the enemy is attacking.
+ * @param multiplier The multiplier added to the attack.
+ */
 - (NSString*)enemyTurnWithEnemy: (Enemy*)enemy withPlayer: (Player*)player withMultiplier: (NSInteger)number {
     int rand = (arc4random_uniform(4));
     

@@ -19,10 +19,20 @@
     return self;
 }
 
+/**
+ * Sets the HP of the character.
+ *
+ * @param fullHP The HP of the character.
+ */
 - (void)resetHP: (NSInteger)fullHP {
     [self setCurrentHP:fullHP];
 }
 
+/**
+ * Changes the HP to show what the current HP is.
+ *
+ * @param damage The damage amount done to the character.
+ */
 - (void)inflictDamage: (NSInteger)damage {
     [self setCurrentHP:(_currentHP - damage)];
 }
