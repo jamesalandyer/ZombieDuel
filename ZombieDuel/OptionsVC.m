@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *dayThemeButton;
 @property (weak, nonatomic) IBOutlet CustomAnimatedButton *hunterPlayerButton;
 @property (weak, nonatomic) IBOutlet CustomAnimatedButton *hankPlayerButton;
-
+@property (nonatomic) AVAudioPlayer *sfxClick;
 @property (nonatomic) BOOL hunterChosen;
 @property (nonatomic) BOOL nightChosen;
 @end
@@ -25,6 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    @try {
+        _sfxClick = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"click" ofType:@"wav"]] error:nil];
+        [_sfxClick prepareToPlay];
+    }
+    
+    @catch (NSException *exception){
+        NSLog(@"%@", exception.debugDescription);
+    }
+    
     [_hunterPlayerButton imageAnimationWithName:@"hunter_" withState:@"idle" withImageNumber:6];
     [_hankPlayerButton imageAnimationWithName:@"hank_" withState:@"idle" withImageNumber:6];
     
@@ -33,6 +42,7 @@
 }
 
 - (IBAction)nightThemeButtonPressed:(id)sender {
+    [self playClickSound];
     _nightThemeButton.alpha = 1.0;
     _nightThemeButton.userInteractionEnabled = NO;
     _dayThemeButton.alpha = 0.5;
@@ -41,6 +51,7 @@
 }
 
 - (IBAction)dayThemeButtonPressed:(id)sender {
+    [self playClickSound];
     _dayThemeButton.alpha = 1.0;
     _dayThemeButton.userInteractionEnabled = NO;
     _nightThemeButton.alpha = 0.5;
@@ -49,6 +60,7 @@
 }
 
 - (IBAction)hunterPlayerButtonPressed:(id)sender {
+    [self playClickSound];
     _hunterPlayerButton.alpha = 1.0;
     _hunterPlayerButton.userInteractionEnabled = NO;
     _hankPlayerButton.alpha = 0.5;
@@ -57,6 +69,7 @@
 }
 
 - (IBAction)hankPlayerButtonPressed:(id)sender {
+    [self playClickSound];
     _hankPlayerButton.alpha = 1.0;
     _hankPlayerButton.userInteractionEnabled = NO;
     _hunterPlayerButton.alpha = 0.5;
@@ -74,6 +87,12 @@
         [duelVC setHunterChosen:[self hunterChosen]];
         [duelVC setNightThemeChosen:_nightChosen];
     }
+}
+
+- (void)playClickSound {
+    if (_sfxClick.playing)
+        [_sfxClick stop];
+    [_sfxClick play];
 }
 
 @end

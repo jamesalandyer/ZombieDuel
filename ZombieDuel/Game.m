@@ -33,7 +33,7 @@
     
     if (self) {
         [self setCurrentLevel:1];
-        [self setHighestLevel:(NSInteger)[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"]];
+        [self setHighestLevel:[[NSUserDefaults standardUserDefaults] integerForKey:@"HighScore"]];
         [self setStore:[[Store alloc]init]];
         [self setTurn:[[Turn alloc]init]];
     }

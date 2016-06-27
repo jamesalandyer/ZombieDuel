@@ -18,12 +18,25 @@
 @property (weak, nonatomic) IBOutlet CustomRoundedButton *nextLevelButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentSuppliesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *suppliesLabel;
+@property (nonatomic) AVAudioPlayer *sfxSuccess;
+@property (nonatomic) AVAudioPlayer *sfxFailed;
 @end
 
 @implementation StoreVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    @try {
+        _sfxSuccess = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"success" ofType:@"wav"]] error:nil];
+        [_sfxSuccess prepareToPlay];
+        _sfxFailed = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"failed" ofType:@"wav"]] error:nil];
+        [_sfxFailed prepareToPlay];
+    }
+    
+    @catch (NSException *exception){
+        NSLog(@"%@", exception.debugDescription);
+    }
     
     [_bulletProofVestButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     [_moreAmmoButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
@@ -43,11 +56,16 @@
     if ([[_game store] purchaseItemWithPrice:coinAmount]) {
         [self purchaseFailed:NO];
         [_currentSuppliesLabel setText:[NSString stringWithFormat:@"%ld", (long)[[_game store] currentCoins]]];
+        int increaseAmount;
+        if (coinAmount == 50)
+            increaseAmount = 60;
+        else
+            increaseAmount = 10;
         if ([sender tag] > 1) {
-            NSNotification *notif = [[NSNotification alloc] initWithName:@"attack" object:[NSNumber numberWithInt:coinAmount] userInfo:nil];
+            NSNotification *notif = [[NSNotification alloc] initWithName:@"attack" object:[NSNumber numberWithInt:increaseAmount] userInfo:nil];
             [[NSNotificationCenter defaultCenter] postNotification:notif];
         } else {
-            NSNotification *notif = [[NSNotification alloc] initWithName:@"health" object:[NSNumber numberWithInt:coinAmount] userInfo:nil];
+            NSNotification *notif = [[NSNotification alloc] initWithName:@"health" object:[NSNumber numberWithInt:increaseAmount] userInfo:nil];
             [[NSNotificationCenter defaultCenter] postNotification:notif];
         }
     } else {
@@ -62,9 +80,11 @@
 
 - (void)purchaseFailed: (BOOL)failed {
     if (failed) {
+        [self playFailedSound];
         [_currentSuppliesLabel setTextColor:[UIColor redColor]];
         [_suppliesLabel setTextColor:[UIColor redColor]];
     } else {
+        [self playSuccessSound];
         [_currentSuppliesLabel setTextColor:[UIColor greenColor]];
         [_suppliesLabel setTextColor:[UIColor greenColor]];
     }
@@ -84,6 +104,18 @@
     [_zombieRepellentButton setBackgroundColor:dayColor];
     [_sleepButton setBackgroundColor:dayColor];
     [_nextLevelButton setBackgroundColor:dayColor];
+}
+
+- (void)playSuccessSound {
+    if (_sfxSuccess.playing)
+        [_sfxSuccess stop];
+    [_sfxSuccess play];
+}
+
+- (void)playFailedSound {
+    if (_sfxFailed.playing)
+        [_sfxFailed stop];
+    [_sfxFailed play];
 }
 
 @end

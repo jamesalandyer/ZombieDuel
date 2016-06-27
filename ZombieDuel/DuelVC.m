@@ -41,16 +41,28 @@
 @property (weak, nonatomic) IBOutlet UIView *restartBackgroundView;
 @property (weak, nonatomic) IBOutlet UIView *restartView;
 @property (weak, nonatomic) IBOutlet CharacterAnimationImageView *restartBobImageView;
-
 @property (nonatomic) Game *game;
 @property (nonatomic) Player *player;
 @property (nonatomic) Enemy *enemy;
+@property (nonatomic) AVAudioPlayer *sfxInjured;
+@property (nonatomic) AVAudioPlayer *sfxDeath;
 @end
 
 @implementation DuelVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    @try {
+        _sfxInjured = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"injured" ofType:@"wav"]] error:nil];
+        [_sfxInjured prepareToPlay];
+        _sfxDeath = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"death" ofType:@"wav"]] error:nil];
+        [_sfxDeath prepareToPlay];
+    }
+    
+    @catch (NSException *exception){
+        NSLog(@"%@", exception.debugDescription);
+    }
     
     [self setGame:[[Game alloc]init]];
     
@@ -170,6 +182,7 @@
 }
 
 - (void)playerInjured {
+    [self playInjuredSound];
     [_playerInjuredImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_injured.png", [[_player name] lowercaseString]]]];
     _playerInjuredImageView.hidden = false;
     [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(hidePlayerInjured) userInfo:nil repeats:false];
@@ -180,6 +193,7 @@
 }
 
 - (void)enemyInjured {
+    [self playInjuredSound];
     [_enemyInjuredImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_injured.png", [[_enemy name] lowercaseString]]]];
     _enemyInjuredImageView.hidden = false;
     [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(hideEnemyInjured) userInfo:nil repeats:false];
@@ -201,6 +215,7 @@
 }
 
 - (void)playerDied {
+    [self playDeathSound];
     _playerDeathImageView.hidden = false;
     _playerImageView.hidden = true;
     [_playerDeathImageView imageAnimationWithName:[NSString stringWithFormat:@"%@_", [[_player name] lowercaseString]] withState:@"dead" withImageNumber:(int)[_player deadImageNumber]];
@@ -211,6 +226,7 @@
 }
 
 - (void)enemyDied {
+    [self playDeathSound];
     _enemyDeathImageView.hidden = false;
     _enemyImageView.hidden = true;
     [_enemyDeathImageView imageAnimationWithName:[NSString stringWithFormat:@"%@_", [[_enemy name] lowercaseString]] withState:@"dead" withImageNumber:(int)[_enemy deadImageNumber]];
@@ -229,6 +245,18 @@
         [storeVC setGame:_game];
         [storeVC setNightTheme:[self nightThemeChosen]];
     }
+}
+
+- (void)playInjuredSound {
+    if (_sfxInjured.playing)
+        [_sfxInjured stop];
+    [_sfxInjured play];
+}
+
+- (void)playDeathSound {
+    if (_sfxDeath.playing)
+        [_sfxDeath stop];
+    [_sfxDeath play];
 }
 
 @end

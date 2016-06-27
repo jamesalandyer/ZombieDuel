@@ -79,13 +79,6 @@
                                     <constraint firstAttribute="width" constant="116" id="fMw-DN-tYb"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie_intro" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-7H-ebM">
-                                <rect key="frame" x="378" y="230" width="113" height="139"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="139" id="kkl-Qu-i5j"/>
-                                    <constraint firstAttribute="width" constant="113" id="lDs-To-ALE"/>
-                                </constraints>
-                            </imageView>
                             <view opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7g-Td-J58">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,6 +150,13 @@
                                     <constraint firstItem="cLj-aV-FJG" firstAttribute="centerX" secondItem="MgJ-3N-llf" secondAttribute="centerX" id="cpK-kn-4FY"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zombie_intro" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-7H-ebM">
+                                <rect key="frame" x="378" y="230" width="113" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="kkl-Qu-i5j"/>
+                                    <constraint firstAttribute="width" constant="113" id="lDs-To-ALE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -186,6 +186,8 @@
                     </view>
                     <connections>
                         <outlet property="highScoreLabel" destination="XNv-hC-9qI" id="y5n-eb-mwK"/>
+                        <outlet property="playerConstraint" destination="9bZ-Kj-SYr" id="XY6-Kn-gsG"/>
+                        <outlet property="zombieConstraint" destination="jVc-6R-LI6" id="Emp-RP-kd6"/>
                         <segue destination="HqK-lE-TP5" kind="show" identifier="showOptionsVC" id="E5b-GB-jMl"/>
                     </connections>
                 </viewController>
@@ -1039,7 +1041,7 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
                                                                 <color key="tintColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" title="+50 ATTACK"/>
+                                                                <state key="normal" title="+60 ATTACK"/>
                                                                 <connections>
                                                                     <action selector="purchaseButton:" destination="zSa-5x-Xyh" eventType="touchUpInside" id="CHH-N7-YsR"/>
                                                                 </connections>
@@ -1068,7 +1070,7 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
                                                                 <color key="tintColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" title="+50 HEALTH"/>
+                                                                <state key="normal" title="+60 HEALTH"/>
                                                                 <connections>
                                                                     <action selector="purchaseButton:" destination="zSa-5x-Xyh" eventType="touchUpInside" id="eoX-mW-CqZ"/>
                                                                 </connections>

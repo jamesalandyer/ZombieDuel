@@ -31,7 +31,7 @@
         NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue + [player extraDamage])];
         if (damageAmount.integerValue == 1000)
             [[player defense] inflictDamage:damageAmount.integerValue];
-        else
+        else if (damageAmount.integerValue > 0)
             [[enemy defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[playerAttack allKeys] objectAtIndex:0];
     } else if ((Hank*)player) {
@@ -41,7 +41,7 @@
         NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue + [player extraDamage])];
         if (damageAmount.integerValue == 1000)
             [[player defense] inflictDamage:damageAmount.integerValue];
-        else
+        else if (damageAmount.integerValue > 0)
             [[enemy defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[playerAttack allKeys] objectAtIndex:0];
     }
@@ -56,73 +56,81 @@
         Jack *currentEnemy = (Jack*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     } else if ((Melissa*)enemy) {
         Melissa *currentEnemy = (Melissa*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     } else if ((Timmy*)enemy) {
         Timmy *currentEnemy = (Timmy*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     } else if ((Johnny*)enemy) {
         Johnny *currentEnemy = (Johnny*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     } else if ((Kip*)enemy) {
         Kip *currentEnemy = (Kip*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     } else if ((Sally*)enemy) {
         Sally *currentEnemy = (Sally*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     } else if ((Bob*)enemy) {
         Bob *currentEnemy = (Bob*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     } else if ((Carl*)enemy) {
         Carl *currentEnemy = (Carl*)enemy;
         NSMutableDictionary *enemyAttack = [[currentEnemy attack] attackWithAttack:[NSNumber numberWithInt:rand]];
         NSNumber *damageAmount = (NSNumber*)[[enemyAttack allValues] objectAtIndex:0];
+        NSNumber *adjustedDamageAmount = [NSNumber numberWithInteger:(damageAmount.integerValue * number)];
         if (damageAmount.integerValue == 1000)
             [[enemy defense] inflictDamage:damageAmount.integerValue];
         else
-            [[player defense] inflictDamage:damageAmount.integerValue];
+            [[player defense] inflictDamage:adjustedDamageAmount.integerValue];
         return (NSString*)[[enemyAttack allKeys] objectAtIndex:0];
     }
     

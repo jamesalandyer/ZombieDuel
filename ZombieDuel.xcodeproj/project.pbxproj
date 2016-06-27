@@ -41,6 +41,14 @@
 		2BA1DB181D1D09DB00FF28D4 /* Turn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB171D1D09DB00FF28D4 /* Turn.m */; };
 		2BA1DB1C1D1DD45A00FF28D4 /* CharacterAnimationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB1B1D1DD45A00FF28D4 /* CharacterAnimationImageView.m */; };
 		2BA1DB1F1D1DEE4100FF28D4 /* CustomCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB1E1D1DEE4100FF28D4 /* CustomCircleButton.m */; };
+		2BA1DB221D20865500FF28D4 /* AnimationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1DB211D20865500FF28D4 /* AnimationEngine.m */; };
+		2BA1DB261D20AC3B00FF28D4 /* injured.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DB251D20AC3B00FF28D4 /* injured.wav */; };
+		2BA1DB281D20AC4800FF28D4 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DB271D20AC4800FF28D4 /* death.wav */; };
+		2BA1DB2B1D20B08500FF28D4 /* failed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DB291D20B08500FF28D4 /* failed.wav */; };
+		2BA1DB2C1D20B08500FF28D4 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DB2A1D20B08500FF28D4 /* success.wav */; };
+		2BA1DB2F1D20B0E600FF28D4 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DB2D1D20B0E600FF28D4 /* click.wav */; };
+		2BA1DB301D20B0E600FF28D4 /* title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1DB2E1D20B0E600FF28D4 /* title.wav */; };
+		D2EE528A602AE4EE5F844192 /* libPods-ZombieDuel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA2D48DCE2010E6868015C /* libPods-ZombieDuel.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +116,17 @@
 		2BA1DB1B1D1DD45A00FF28D4 /* CharacterAnimationImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterAnimationImageView.m; sourceTree = "<group>"; };
 		2BA1DB1D1D1DEE4100FF28D4 /* CustomCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCircleButton.h; sourceTree = "<group>"; };
 		2BA1DB1E1D1DEE4100FF28D4 /* CustomCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCircleButton.m; sourceTree = "<group>"; };
+		2BA1DB201D20865500FF28D4 /* AnimationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationEngine.h; sourceTree = "<group>"; };
+		2BA1DB211D20865500FF28D4 /* AnimationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationEngine.m; sourceTree = "<group>"; };
+		2BA1DB251D20AC3B00FF28D4 /* injured.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = injured.wav; sourceTree = "<group>"; };
+		2BA1DB271D20AC4800FF28D4 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		2BA1DB291D20B08500FF28D4 /* failed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = failed.wav; sourceTree = "<group>"; };
+		2BA1DB2A1D20B08500FF28D4 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
+		2BA1DB2D1D20B0E600FF28D4 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		2BA1DB2E1D20B0E600FF28D4 /* title.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = title.wav; sourceTree = "<group>"; };
+		38DC2E580FB095193151A8B1 /* Pods-ZombieDuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZombieDuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZombieDuel/Pods-ZombieDuel.debug.xcconfig"; sourceTree = "<group>"; };
+		8FFA2D48DCE2010E6868015C /* libPods-ZombieDuel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZombieDuel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DE583C5CCE818224519816 /* Pods-ZombieDuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZombieDuel.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZombieDuel/Pods-ZombieDuel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EE528A602AE4EE5F844192 /* libPods-ZombieDuel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +146,8 @@
 			children = (
 				2BA1DA941D1B867A00FF28D4 /* ZombieDuel */,
 				2BA1DA931D1B867A00FF28D4 /* Products */,
+				3B4873B8E4D6DFDC5FFCBBA5 /* Pods */,
+				2C5B9D5F607A825B663EC2D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +231,8 @@
 			children = (
 				2BA1DB191D1DD42D00FF28D4 /* ImageView */,
 				2BA1DB0C1D1BB64800FF28D4 /* Buttons */,
+				2BA1DB201D20865500FF28D4 /* AnimationEngine.h */,
+				2BA1DB211D20865500FF28D4 /* AnimationEngine.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -398,6 +422,12 @@
 		2BA1DB021D1B9D2D00FF28D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2BA1DB251D20AC3B00FF28D4 /* injured.wav */,
+				2BA1DB271D20AC4800FF28D4 /* death.wav */,
+				2BA1DB291D20B08500FF28D4 /* failed.wav */,
+				2BA1DB2A1D20B08500FF28D4 /* success.wav */,
+				2BA1DB2D1D20B0E600FF28D4 /* click.wav */,
+				2BA1DB2E1D20B0E600FF28D4 /* title.wav */,
 				2BA1DAFE1D1B9D1B00FF28D4 /* Roboto-Bold.ttf */,
 				2BA1DAFF1D1B9D1B00FF28D4 /* Roboto-Regular.ttf */,
 			);
@@ -455,6 +485,23 @@
 			name = ImageView;
 			sourceTree = "<group>";
 		};
+		2C5B9D5F607A825B663EC2D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA2D48DCE2010E6868015C /* libPods-ZombieDuel.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B4873B8E4D6DFDC5FFCBBA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38DC2E580FB095193151A8B1 /* Pods-ZombieDuel.debug.xcconfig */,
+				A2DE583C5CCE818224519816 /* Pods-ZombieDuel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,9 +509,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BA1DAA91D1B867B00FF28D4 /* Build configuration list for PBXNativeTarget "ZombieDuel" */;
 			buildPhases = (
+				EEF49AA2C149984637561A61 /* [CP] Check Pods Manifest.lock */,
 				2BA1DA8E1D1B867A00FF28D4 /* Sources */,
 				2BA1DA8F1D1B867A00FF28D4 /* Frameworks */,
 				2BA1DA901D1B867A00FF28D4 /* Resources */,
+				8821D43BDC4CE950B75ED188 /* [CP] Embed Pods Frameworks */,
+				7F96486D47A15B8F2AF04F13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -514,13 +564,67 @@
 			files = (
 				2BA1DAA51D1B867B00FF28D4 /* LaunchScreen.storyboard in Resources */,
 				2BA1DAA21D1B867B00FF28D4 /* Assets.xcassets in Resources */,
+				2BA1DB261D20AC3B00FF28D4 /* injured.wav in Resources */,
 				2BA1DB011D1B9D1B00FF28D4 /* Roboto-Regular.ttf in Resources */,
+				2BA1DB281D20AC4800FF28D4 /* death.wav in Resources */,
+				2BA1DB2F1D20B0E600FF28D4 /* click.wav in Resources */,
+				2BA1DB2C1D20B08500FF28D4 /* success.wav in Resources */,
+				2BA1DB301D20B0E600FF28D4 /* title.wav in Resources */,
+				2BA1DB2B1D20B08500FF28D4 /* failed.wav in Resources */,
 				2BA1DB001D1B9D1B00FF28D4 /* Roboto-Bold.ttf in Resources */,
 				2BA1DAA01D1B867A00FF28D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F96486D47A15B8F2AF04F13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZombieDuel/Pods-ZombieDuel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8821D43BDC4CE950B75ED188 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZombieDuel/Pods-ZombieDuel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF49AA2C149984637561A61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2BA1DA8E1D1B867A00FF28D4 /* Sources */ = {
@@ -553,6 +657,7 @@
 				2BA1DAC01D1B8ECD00FF28D4 /* Player.m in Sources */,
 				2BA1DAE51D1B91B100FF28D4 /* Timmy.m in Sources */,
 				2BA1DAD51D1B914D00FF28D4 /* Hunter.m in Sources */,
+				2BA1DB221D20865500FF28D4 /* AnimationEngine.m in Sources */,
 				2BA1DADB1D1B918600FF28D4 /* Enemy.m in Sources */,
 				2BA1DAB51D1B8AFD00FF28D4 /* OptionsVC.m in Sources */,
 				2BA1DB1C1D1DD45A00FF28D4 /* CharacterAnimationImageView.m in Sources */,
@@ -667,6 +772,7 @@
 		};
 		2BA1DAAA1D1B867B00FF28D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38DC2E580FB095193151A8B1 /* Pods-ZombieDuel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZombieDuel/Info.plist;
@@ -678,6 +784,7 @@
 		};
 		2BA1DAAB1D1B867B00FF28D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2DE583C5CCE818224519816 /* Pods-ZombieDuel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZombieDuel/Info.plist;
